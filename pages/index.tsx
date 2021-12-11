@@ -7,14 +7,19 @@ import { getAllPosts, getPostBySlug, Items } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import Post from '../types/post'
+import { HeroSectionData, HeroSection } from '../components/sections/HeroSection'
+import React from 'react'
+
 
 type Props = {
-  heroSection: Items
+  heroSectionData: HeroSectionData
+  // membersSectionData: MembersSectionData
 }
 
-const Index = ({ heroSection }: Props) => {
+const Index = ({ heroSectionData }: Props) => {
   // const heroPost = allPosts[0]
   // const morePosts = allPosts.slice(1)
+  console.log("heroSectionData", heroSectionData)
   return (
     <>
       <Layout>
@@ -33,7 +38,8 @@ const Index = ({ heroSection }: Props) => {
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
-          {JSON.stringify(heroSection)}
+          <HeroSection data={heroSectionData} />
+
         </Container>
       </Layout>
     </>
@@ -51,11 +57,11 @@ export const getStaticProps = async () => {
   //   'coverImage',
   // ])
 
-  const heroSection = getPostBySlug("hero-section")
+  const heroSectionData = getPostBySlug("hero-section")
 
-  console.log("heroSection", heroSection);
+  console.log("heroSectionData", heroSectionData);
 
   return {
-    props: { heroSection },
+    props: { heroSectionData },
   }
 }
