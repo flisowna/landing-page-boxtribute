@@ -3,18 +3,18 @@ import MoreStories from '../components/more-stories'
 import HeroPost from '../components/hero-post'
 import Intro from '../components/intro'
 import Layout from '../components/layout'
-import { getAllPosts } from '../lib/api'
+import { getAllPosts, getPostBySlug, Items } from '../lib/api'
 import Head from 'next/head'
 import { CMS_NAME } from '../lib/constants'
 import Post from '../types/post'
 
 type Props = {
-  allPosts: Post[]
+  heroSection: Items
 }
 
-const Index = ({ allPosts }: Props) => {
-  const heroPost = allPosts[0]
-  const morePosts = allPosts.slice(1)
+const Index = ({ heroSection }: Props) => {
+  // const heroPost = allPosts[0]
+  // const morePosts = allPosts.slice(1)
   return (
     <>
       <Layout>
@@ -23,17 +23,17 @@ const Index = ({ allPosts }: Props) => {
         </Head>
         <Container>
           <Intro />
-          {heroPost && (
+          {/* {heroPost && (
             <HeroPost
               title={heroPost.title}
               coverImage={heroPost.coverImage}
               date={heroPost.date}
               author={heroPost.author}
               slug={heroPost.slug}
-              excerpt={heroPost.excerpt}
             />
           )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />}
+          {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
+          {JSON.stringify(heroSection)}
         </Container>
       </Layout>
     </>
@@ -43,16 +43,19 @@ const Index = ({ allPosts }: Props) => {
 export default Index
 
 export const getStaticProps = async () => {
-  const allPosts = getAllPosts([
-    'title',
-    'date',
-    'slug',
-    'author',
-    'coverImage',
-    'excerpt',
-  ])
+  // const allPosts = getAllPosts([
+  //   'title',
+  //   'date',
+  //   'slug',
+  //   'author',
+  //   'coverImage',
+  // ])
+
+  const heroSection = getPostBySlug("hero-section")
+
+  console.log("heroSection", heroSection);
 
   return {
-    props: { allPosts },
+    props: { heroSection },
   }
 }

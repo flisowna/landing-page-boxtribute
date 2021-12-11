@@ -1,7 +1,6 @@
 ---
-title: 'Dynamic Routing and Static Generation'
-excerpt: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Praesent elementum facilisis leo vel fringilla est ullamcorper eget. At imperdiet dui accumsan sit amet nulla facilities morbi tempus.'
-coverImage: '/assets/blog/dynamic-routing/cover.jpg'
+title: 'Boxtribute is a digital system that works hand-in-hand with our partners in the field to deliver humanitarian aid quickly and fairly.'
+coverImage: '/assets/images/hero.jpg'
 date: '2020-03-16T05:35:07.322Z'
 author:
   name: JJ Kasper
