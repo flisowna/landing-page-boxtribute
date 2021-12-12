@@ -8,7 +8,7 @@ sections:
   path: _sections/hero-section.md
   label: Hero1
 - type: directory
-  path: src/_sections
+  path: _sections
   label: Hero
   create: all
   match: "**/*"
