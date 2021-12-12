@@ -5,9 +5,8 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: src/_sections/hero-section.md
+  path: _sections/hero-section.md
   label: Hero1
-  match: "**/*"
 - type: directory
   path: src/_sections
   label: Hero
