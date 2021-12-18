@@ -1,6 +1,6 @@
 ---
-label: new template
-hide_body: false
+label: 'team '
+hide_body: true
 fields:
 - name: list_of_members
   type: field_group_list
