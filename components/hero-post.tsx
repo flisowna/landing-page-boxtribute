@@ -15,7 +15,6 @@ type Props = {
 const HeroPost = ({
   title,
   coverImage,
-  date,
   author,
   slug,
 }: Props) => {
@@ -31,9 +30,6 @@ const HeroPost = ({
               <a className="hover:underline">{title}</a>
             </Link>
           </h3>
-          <div className="mb-4 md:mb-0 text-lg">
-            <DateFormatter dateString={date} />
-          </div>
         </div>
         <div>
           <Avatar name={author.name} picture={author.picture} />

@@ -7,7 +7,6 @@ import Author from '../types/author'
 type Props = {
   title: string
   coverImage: string
-  date: string
   author: Author
   slug: string
 }
@@ -15,7 +14,6 @@ type Props = {
 const PostPreview = ({
   title,
   coverImage,
-  date,
   author,
   slug,
 }: Props) => {
@@ -29,9 +27,6 @@ const PostPreview = ({
           <a className="hover:underline">{title}</a>
         </Link>
       </h3>
-      <div className="text-lg mb-4">
-        <DateFormatter dateString={date} />
-      </div>
       <Avatar name={author.name} picture={author.picture} />
     </div>
   )
