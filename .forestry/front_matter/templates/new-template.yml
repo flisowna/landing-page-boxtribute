@@ -1,4 +1,25 @@
 ---
 label: new template
 hide_body: false
-fields: []
+fields:
+- name: list_of_members
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: true
+    label: name
+    default: name surname
+  - name: role
+    type: text
+    config:
+      required: true
+    label: role
+    hidden: false
+    default: role
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: list of members
