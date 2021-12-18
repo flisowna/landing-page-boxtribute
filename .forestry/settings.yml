@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: document
-  path: components/**
+  path: _sections/team-member.md
   label: team-member
 - type: document
   path: _sections/hero-section.md
