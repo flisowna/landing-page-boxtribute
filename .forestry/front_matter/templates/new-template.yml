@@ -18,8 +18,13 @@ fields:
     label: role
     hidden: false
     default: role
+  - name: picture
+    type: file
+    config:
+      maxSize: 64
+    label: picture
   config:
     min: 
     max: 
     labelField: 
-  label: list of members
+  label: list of members repeatable
