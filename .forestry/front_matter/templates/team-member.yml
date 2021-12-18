@@ -1,0 +1,13 @@
+---
+label: team-member
+hide_body: true
+fields:
+- type: text
+  name: name
+  label: name
+- type: text
+  name: role
+  label: role
+- type: file
+  name: picture
+  label: picture
