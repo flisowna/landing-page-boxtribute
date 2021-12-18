@@ -29,4 +29,4 @@ fields:
     labelField: 
   label: list of members repeatable
 pages:
-- _sections/member1.md
+- _sections/team.md
