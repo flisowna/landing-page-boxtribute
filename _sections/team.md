@@ -1,5 +1,8 @@
 ---
 team_members:
+- name: Philipp der Gemütliche
+  role: role
+  picture: ''
 - name: Dani der Susse
   role: Koch
   picture: "/uploads/unordered.jpg"
