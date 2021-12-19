@@ -1,5 +1,5 @@
 ---
-list_of_members:
+team_members:
 - name: Dani der Susse
   role: Koch
   picture: "/uploads/unordered.jpg"
@@ -9,5 +9,4 @@ list_of_members:
 - picture: "/uploads/ordered.jpg"
   name: Vahid Bossanova
   role: Developer
-
 ---

@@ -9,17 +9,21 @@ import { CMS_NAME } from '../lib/constants'
 import Post from '../types/post'
 import { HeroSectionData, HeroSection } from '../components/sections/HeroSection'
 import React from 'react'
+import { TeamMember, TeamSection, TeamSectionData } from '../components/sections/TeamSection'
 
 
 type Props = {
   heroSectionData: HeroSectionData
+  teamSectionData: TeamSectionData
   // membersSectionData: MembersSectionData
 }
 
-const Index = ({ heroSectionData }: Props) => {
+
+const Index = ({ heroSectionData, teamSectionData }: Props) => {
   // const heroPost = allPosts[0]
   // const morePosts = allPosts.slice(1)
   console.log("heroSectionData", heroSectionData)
+  console.log(teamSectionData)
   return (
     <>
       <Layout>
@@ -39,6 +43,7 @@ const Index = ({ heroSectionData }: Props) => {
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
           <HeroSection data={heroSectionData} />
+          <TeamSection team_members={teamSectionData.team_members} />
 
         </Container>
       </Layout>
@@ -58,10 +63,12 @@ export const getStaticProps = async () => {
   // ])
 
   const heroSectionData = getPostBySlug("hero-section")
+  const teamSectionData = getPostBySlug("team")
 
   console.log("heroSectionData", heroSectionData);
+  console.log("teamSectionData", teamSectionData);
 
   return {
-    props: { heroSectionData },
+    props: { heroSectionData, teamSectionData }
   }
 }
