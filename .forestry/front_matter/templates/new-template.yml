@@ -2,7 +2,7 @@
 label: 'team '
 hide_body: true
 fields:
-- name: list_of_members
+- name: team_members
   type: field_group_list
   fields:
   - name: name

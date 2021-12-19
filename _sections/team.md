@@ -1,8 +1,4 @@
 ---
-list_of_members:
-- name: name surname
-  role: role
-  picture: "/uploads/unordered.jpg"
 team_members:
 - name: Dani der Susse
   role: Koch
