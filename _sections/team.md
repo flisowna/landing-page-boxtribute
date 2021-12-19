@@ -1,4 +1,5 @@
 ---
+list_of_members: []
 team_members:
 - name: Dani der Susse
   role: Koch
@@ -9,4 +10,5 @@ team_members:
 - picture: "/uploads/ordered.jpg"
   name: Vahid Bossanova
   role: Developer
+
 ---
