@@ -13,8 +13,8 @@ team_members:
   picture: "/uploads/2_palac-kultury-i-nauki.jpeg"
   link: ''
 - picture: "/uploads/ordered.jpg"
-  name: Vahid Bossanova
+  name: Vahid Bazzaz
   role: Developer
-  link: ''
+  link: https://github.com/vahidbazzaz
 
 ---
