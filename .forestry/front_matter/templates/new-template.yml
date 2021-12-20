@@ -23,6 +23,12 @@ fields:
     config:
       maxSize: 64
     label: picture
+  - name: link
+    type: text
+    config:
+      required: false
+    label: link
+    description: link (github, linkedin) of the team member
   config:
     min: 
     max: 
