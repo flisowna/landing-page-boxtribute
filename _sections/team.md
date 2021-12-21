@@ -10,7 +10,7 @@ team_members:
   link: https://github.com/spaudanjo
 - name: Hans der Grosse
   role: Head
-  picture: "/uploads/2_palac-kultury-i-nauki.jpeg"
+  picture: "/uploads/hans.png"
   link: ''
 - picture: "/uploads/ordered.jpg"
   name: Vahid Bazzaz
