@@ -6,7 +6,7 @@ team_members:
   link: ''
 - name: Dani der Susse
   role: Koch
-  picture: "/uploads/unordered.jpg"
+  picture: "/uploads/daniel.png"
   link: https://github.com/spaudanjo
 - name: Hans der Grosse
   role: Head
