@@ -2,7 +2,7 @@
 team_members:
 - name: Philipp der Gemütliche
   role: role
-  picture: "/uploads/2_palac-kultury-i-nauki.jpeg"
+  picture: "/uploads/philip.png"
   link: ''
 - name: Dani der Susse
   role: Koch
