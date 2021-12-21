@@ -14,11 +14,11 @@ export interface TeamSectionData {
 }
 
 export const TeamSection = ({ team_members }: TeamSectionData) => {
-    return <div>{team_members.map(teamMember => (
-        <div style={{ backgroundColor: "blue" }}>
-            <img src={teamMember.picture} className="w-12 h-12 rounded-full mr-4"/>
-            <h2>{teamMember.name}</h2>
-            <h2>{teamMember.role}</h2>
+    return <div className="flex flex-row flex-wrap justify-center">{team_members.map(teamMember => (
+        <div className="m-4 flex flex-col w-28 h-46 p-2 items-center">
+            <img src={teamMember.picture} className="w-20 h-20 rounded-full"/>
+            <h3 className="text-sm mt-2 text-center">{teamMember.name}</h3>
+            <h4 className="text-xs">{teamMember.role}</h4>
             
         </div>
     ))}
