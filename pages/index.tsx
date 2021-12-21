@@ -44,6 +44,7 @@ const Index = ({ heroSectionData, teamSectionData }: Props) => {
           {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
           <HeroSection data={heroSectionData} />
           <TeamSection team_members={teamSectionData.team_members} />
+          
 
         </Container>
       </Layout>
