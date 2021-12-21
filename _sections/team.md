@@ -12,7 +12,7 @@ team_members:
   role: Head
   picture: "/uploads/hans.png"
   link: ''
-- picture: "/uploads/ordered.jpg"
+- picture: "/uploads/vahid.png"
   name: Vahid Bazzaz
   role: Developer
   link: https://github.com/vahidbazzaz
