@@ -1,5 +1,9 @@
 ---
 team_members:
+- name: name surname
+  role: role
+  picture: "/uploads/roanna.png"
+  link: ''
 - name: Philipp der Gemütliche
   role: role
   picture: "/uploads/philip.png"
