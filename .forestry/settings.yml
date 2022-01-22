@@ -15,12 +15,10 @@ sections:
 - type: heading
   label: Our Impact
 - type: directory
-  path: src/_sections/our_impact
+  path: _sections/our_impact
   label: Map
   create: all
   match: "**/*"
-  templates:
-  - markers-on-map
 - type: heading
   label: Get Involved
 - type: heading
