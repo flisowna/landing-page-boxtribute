@@ -4,6 +4,18 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: heading
+  label: Home
+- type: heading
+  label: Our Impact
+- type: heading
+  label: Get Involved
+- type: heading
+  label: About Us
+- type: heading
+  label: Partners
+- type: heading
+  label: News
 - type: document
   path: _sections/team-member.md
   label: team-member
