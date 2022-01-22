@@ -19,6 +19,8 @@ sections:
   label: Map
   create: all
   match: "**/*"
+  templates:
+  - markers-on-map
 - type: heading
   label: Get Involved
 - type: heading
