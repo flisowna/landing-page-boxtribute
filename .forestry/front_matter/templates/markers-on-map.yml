@@ -24,6 +24,17 @@ fields:
       schema:
         format: markdown
     label: description of the project
+  - name: gps_coordinates
+    type: number
+    label: GPS coordinates of the place
+    description: 'to get the coordinates hold mouse/finger in the google maps on the
+      place you want to add and copy two numbers, an example: 51.989464, 13.218106<br>'
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
   config:
     min: 
     max: 
