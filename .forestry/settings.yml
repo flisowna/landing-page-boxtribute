@@ -16,7 +16,7 @@ sections:
   label: Our Impact
 - type: directory
   path: src/_sections/our_impact
-  label: Maps Pointers
+  label: Map
   create: all
   match: "**/*"
   templates:
