@@ -55,4 +55,5 @@ fields:
   label: details of the markers
   description: a form for placing a new marker on the map
 pages:
+- src/_sections/our_impact/Map Pointers/tehran-boxtribute.md
 - src/_sections/our_impact/Map/tehran-boxtribute.md
