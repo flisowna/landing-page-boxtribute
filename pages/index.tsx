@@ -11,6 +11,7 @@ import { HeroSectionData, HeroSection } from '../components/sections/HeroSection
 import React from 'react'
 import { TeamMember, TeamSection, TeamSectionData } from '../components/sections/TeamSection'
 import RenderMap from "../components/rendering-map"
+import { MapSection, MapSectionData} from '../components/sections/MapSection'
 
 
 
@@ -18,11 +19,12 @@ import RenderMap from "../components/rendering-map"
 type Props = {
   heroSectionData: HeroSectionData
   teamSectionData: TeamSectionData
+  mapSectionData: MapSectionData
   // membersSectionData: MembersSectionData
 }
 
 
-const Index = ({ heroSectionData, teamSectionData }: Props) => {
+const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
   // const heroPost = allPosts[0]
   // const morePosts = allPosts.slice(1)
   console.log("heroSectionData", heroSectionData)
@@ -35,7 +37,7 @@ const Index = ({ heroSectionData, teamSectionData }: Props) => {
           <script src="js/leaflet-providers.js"></script>
         </Head>
         <Container>
-        <RenderMap />
+        {/* <RenderMap /> */}
 
           {/* {heroPost && (
             <HeroPost
@@ -49,7 +51,7 @@ const Index = ({ heroSectionData, teamSectionData }: Props) => {
           {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
           <HeroSection data={heroSectionData} />
           <TeamSection team_members={teamSectionData.team_members} />
-
+          <MapSection map_pointers={mapSectionData.map_pointers}/>
 
         </Container>
       </Layout>
@@ -70,11 +72,12 @@ export const getStaticProps = async () => {
 
   const heroSectionData = getPostBySlug("hero-section")
   const teamSectionData = getPostBySlug("team")
+  const mapSectionData = getPostBySlug("our_impact/map-pointers")
 
   console.log("heroSectionData", heroSectionData);
   console.log("teamSectionData", teamSectionData);
 
   return {
-    props: { heroSectionData, teamSectionData }
+    props: { heroSectionData, teamSectionData, mapSectionData }
   }
 }
