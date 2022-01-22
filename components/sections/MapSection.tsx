@@ -2,8 +2,8 @@ import React from "react"
 import { MapContainer, Marker, Popup, TileLayer,  } from 'react-leaflet'
 import 'leaflet/dist/leaflet.css'
 import { icon } from "leaflet"
-// import Link from 'next/link'
-// import Image from 'next/image'
+import Link from 'next/link'
+import Image from 'next/image'
 
 export interface MapPointer {
     nameplace: string
@@ -17,12 +17,23 @@ export interface MapSectionData {
     map_pointers: Array<MapPointer>
 }
 
-export const MapSection = ({ map_pointers }: MapSectionData) => {
+export const MapSection = ({ map_pointers = []}: MapSectionData) => {
+// export const MapSection = () => {
+
+    // if (!(typeof window !== "undefined")) {
+    if (!process.browser) {
+        console.log("ON SERVER")
+        return <div>Leaflet cannot render on serverside</div>
+    }
+
+    else {
+        
     const CustomIcon = icon({
         iconUrl: "/boxtribute-logo.png",
         iconSize: [32, 32],
         iconAnchor: [16, 32],
       });
+      
     return (
     <div className="flex flex-row flex-wrap justify-center">  
      <MapContainer
@@ -49,4 +60,6 @@ export const MapSection = ({ map_pointers }: MapSectionData) => {
 
     </div>
     )
+    // return <div>Client</div>
+}
 }

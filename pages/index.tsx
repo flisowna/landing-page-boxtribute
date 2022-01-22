@@ -10,8 +10,9 @@ import Post from '../types/post'
 import { HeroSectionData, HeroSection } from '../components/sections/HeroSection'
 import React from 'react'
 import { TeamMember, TeamSection, TeamSectionData } from '../components/sections/TeamSection'
-import RenderMap from "../components/rendering-map"
-import { MapSection, MapSectionData} from '../components/sections/MapSection'
+// import RenderMap from "../components/rendering-map"
+import { MapSectionData} from '../components/sections/MapSection'
+import dynamic from 'next/dynamic'
 
 
 
@@ -29,6 +30,11 @@ const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
   // const morePosts = allPosts.slice(1)
   console.log("heroSectionData", heroSectionData)
   console.log(teamSectionData)
+
+  const MapSection = dynamic(() => import("../components/map"), {
+    ssr: false
+  });
+
   return (
     <>
       <Layout>
@@ -51,7 +57,8 @@ const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
           {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
           <HeroSection data={heroSectionData} />
           <TeamSection team_members={teamSectionData.team_members} />
-          <MapSection map_pointers={mapSectionData.map_pointers}/>
+          {/* <MapSection map_pointers={mapSectionData.map_pointers}/> */}
+          <MapSection map_pointers={[]}/>
 
         </Container>
       </Layout>
