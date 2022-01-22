@@ -10,6 +10,9 @@ import Post from '../types/post'
 import { HeroSectionData, HeroSection } from '../components/sections/HeroSection'
 import React from 'react'
 import { TeamMember, TeamSection, TeamSectionData } from '../components/sections/TeamSection'
+import RenderMap from "../components/rendering-map"
+
+
 
 
 type Props = {
@@ -29,9 +32,11 @@ const Index = ({ heroSectionData, teamSectionData }: Props) => {
       <Layout>
         <Head>
           <title>Next.js Blog Example with {CMS_NAME}</title>
+          <script src="js/leaflet-providers.js"></script>
         </Head>
         <Container>
-          
+        <RenderMap />
+
           {/* {heroPost && (
             <HeroPost
               title={heroPost.title}
@@ -44,7 +49,7 @@ const Index = ({ heroSectionData, teamSectionData }: Props) => {
           {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
           <HeroSection data={heroSectionData} />
           <TeamSection team_members={teamSectionData.team_members} />
-          
+
 
         </Container>
       </Layout>

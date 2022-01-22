@@ -10,15 +10,8 @@ import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
-import PostType from '../../types/post'
 
-type Props = {
-  post: PostType
-  morePosts: PostType[]
-  preview?: boolean
-}
-
-const Post = ({ post, morePosts, preview }: Props) => {
+export default function Post({ post, morePosts, preview }) {
   const router = useRouter()
   if (!router.isFallback && !post?.slug) {
     return <ErrorPage statusCode={404} />
@@ -53,16 +46,16 @@ const Post = ({ post, morePosts, preview }: Props) => {
   )
 }
 
-export default Post
-
-type Params = {
-  params: {
-    slug: string
-  }
-}
-
-export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug)
+export async function getStaticProps({ params }) {
+  const post = getPostBySlug(params.slug, [
+    'title',
+    'date',
+    'slug',
+    'author',
+    'content',
+    'ogImage',
+    'coverImage',
+  ])
   const content = await markdownToHtml(post.content || '')
 
   return {
