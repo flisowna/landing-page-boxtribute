@@ -15,7 +15,7 @@ sections:
 - type: heading
   label: Our Impact
 - type: directory
-  path: _sections/our_impact
+  path: _sections/out_impact
   label: Map
   create: all
   match: "**/*"
