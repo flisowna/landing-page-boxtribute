@@ -1,4 +1,32 @@
 ---
 label: markers on map
 hide_body: false
-fields: []
+fields:
+- name: details_of_the_markers
+  type: field_group_list
+  fields:
+  - name: name_place
+    type: text
+    config:
+      required: false
+    label: name of the place
+  - name: name_organisation
+    type: text
+    config:
+      required: false
+    label: name of the organisation
+  - name: description_project
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: description of the project
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: details of the markers
+  description: a form for placing a new marker on the map
