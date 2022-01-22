@@ -14,6 +14,13 @@ sections:
   new_doc_ext: md
 - type: heading
   label: Our Impact
+- type: directory
+  path: src/_sections/our_impact
+  label: Maps Pointers
+  create: all
+  match: "**/*"
+  templates:
+  - markers-on-map
 - type: heading
   label: Get Involved
 - type: heading
