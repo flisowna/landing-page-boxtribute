@@ -6,6 +6,12 @@ webhook_url:
 sections:
 - type: heading
   label: Home
+- type: directory
+  path: _sections
+  label: Hero
+  create: all
+  match: "**/*"
+  new_doc_ext: md
 - type: heading
   label: Our Impact
 - type: heading
@@ -22,12 +28,6 @@ sections:
 - type: document
   path: _sections/hero-section.md
   label: Hero1
-- type: directory
-  path: _sections
-  label: Hero
-  create: all
-  match: "**/*"
-  new_doc_ext: md
 upload_dir: public/uploads
 public_path: "/uploads"
 front_matter_path: ''
