@@ -16,7 +16,7 @@ const Map = () => {
         attribution='Map tiles by <a href="http://stamen.com">Stamen Design</a>, <a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash; Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
         url='https://stamen-tiles-{s}.a.ssl.fastly.net/toner-background/{z}/{x}/{y}{r}.png'
       />
-       <Marker icon={CustomIcon} position={[52.5243, 13.4105]}>
+       <Marker icon={CustomIcon} position={[51.972584, 13.220661]}>
         <Popup>wprowadzono ograniczenia. W 2020 do Polski sprowadzono 848 154 samochodów (ponad połowę z Niemiec). Wiek importowanych aut wyniósł średnio 12 lat i 1 miesiąc.
 
 Jak policzył serwis AAAauto, na ponad dwa miliony ofert sprzedaży samochodów aż 869 871 samochodów miało 15 lat i więcej, mediana wieku takich aut wynosiła 17,3, mediana ceny – 7500 złotych, a mediana przebiegu 230 tys. kilometrów.
