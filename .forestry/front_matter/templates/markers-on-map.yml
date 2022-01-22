@@ -54,3 +54,5 @@ fields:
     labelField: 
   label: details of the markers
   description: a form for placing a new marker on the map
+pages:
+- _sections/out_impact/map-pointers.md
