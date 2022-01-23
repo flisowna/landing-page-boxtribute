@@ -2,20 +2,20 @@
 label: markers on map
 hide_body: false
 fields:
-- name: details_of_the_markers
+- name: map_pointers
   type: field_group_list
   fields:
-  - name: name_place
+  - name: nameplace
     type: text
     config:
       required: false
     label: name of the place
-  - name: name_organisation
+  - name: nameorganisation
     type: text
     config:
       required: false
     label: name of the organisation
-  - name: description_project
+  - name: description
     type: textarea
     default: ''
     config:
@@ -24,7 +24,7 @@ fields:
       schema:
         format: markdown
     label: description of the project
-  - name: gps_coordinates_lat
+  - name: lat
     type: number
     label: 'GPS coordinates: latitude (first value)'
     description: 'to get the coordinates hold mouse/finger in the google maps on the
@@ -36,7 +36,7 @@ fields:
       max: 
       step: 
       required: true
-  - name: gps_coordinates_long
+  - name: long
     type: number
     label: 'GPS coordinates: longitude (second value)'
     description: the same like in the latitude but here paste the second value of
