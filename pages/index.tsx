@@ -35,14 +35,17 @@ const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
     ssr: false
   });
 
+  console.log("mapSectionData.map_pointers", mapSectionData.map_pointers)
+
   return (
     <>
       <Layout>
         <Head>
-          <title>Next.js Blog Example with {CMS_NAME}</title>
+          <title>Boxtribute</title>
           <script src="js/leaflet-providers.js"></script>
         </Head>
         <Container>
+        <MapSection map_pointers={mapSectionData.map_pointers}/>
         {/* <RenderMap /> */}
 
           {/* {heroPost && (
@@ -55,10 +58,10 @@ const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
             />
           )}
           {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
-          <HeroSection data={heroSectionData} />
+          {/* <HeroSection data={heroSectionData} /> */}
           <TeamSection team_members={teamSectionData.team_members} />
-          {/* <MapSection map_pointers={mapSectionData.map_pointers}/> */}
-          <MapSection map_pointers={[]}/>
+          
+          {/* <MapSection map_pointers={[]}/> */}
 
         </Container>
       </Layout>
@@ -80,6 +83,9 @@ export const getStaticProps = async () => {
   const heroSectionData = getPostBySlug("hero-section")
   const teamSectionData = getPostBySlug("team")
   const mapSectionData = getPostBySlug("our_impact/map-pointers")
+
+  console.log("mapSectionData", mapSectionData);
+  
 
   console.log("heroSectionData", heroSectionData);
   console.log("teamSectionData", teamSectionData);
