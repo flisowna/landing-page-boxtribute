@@ -1,10 +1,5 @@
 ---
 map_pointers:
-- nameplace: Warsaw
-  nameorganisation: Boxtribute
-  description: jdssdkkcn
-  lat: 52.290603
-  long: 21.219087
 - nameplace: Tehran
   nameorganisation: Boxtribute
   lat: 35.722938
