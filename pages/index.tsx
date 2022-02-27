@@ -1,42 +1,35 @@
-import Container from '../components/container'
-import MoreStories from '../components/more-stories'
-import HeroPost from '../components/hero-post'
-import Intro from '../components/intro'
-import Layout from '../components/layout'
-import { getAllPosts, getPostBySlug, Items } from '../lib/api'
-import Head from 'next/head'
-import { CMS_NAME } from '../lib/constants'
-import Post from '../types/post'
-import { HeroSectionData, HeroSection } from '../components/sections/HeroSection'
-import React from 'react'
-import { TeamMember, TeamSection, TeamSectionData } from '../components/sections/TeamSection'
+import Container from "../components/container";
+import MoreStories from "../components/more-stories";
+import HeroPost from "../components/hero-post";
+import Intro from "../components/intro";
+import Layout from "../components/layout";
+import { getAllPosts, getPostBySlug, Items } from "../lib/api";
+import Head from "next/head";
+import { CMS_NAME } from "../lib/constants";
+import Post from "../types/post";
+import {
+  HeroSectionData,
+  HeroSection,
+} from "../components/sections/HeroSection";
+import React from "react";
+import {
+  ITeamMember,
+  TeamSection,
+  ITeamSectionData,
+} from "../components/sections/TeamSection";
 // import RenderMap from "../components/rendering-map"
-import { MapSectionData} from '../components/sections/MapSection'
-import dynamic from 'next/dynamic'
-
-
-
+import { MapSectionData } from "../components/sections/MapSection";
+import dynamic from "next/dynamic";
+import Typewriter from "typewriter-effect";
 
 type Props = {
-  heroSectionData: HeroSectionData
-  teamSectionData: TeamSectionData
-  mapSectionData: MapSectionData
+  heroSectionData: HeroSectionData;
+  teamSectionData: ITeamSectionData;
+  mapSectionData: MapSectionData;
   // membersSectionData: MembersSectionData
-}
-
+};
 
 const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
-  // const heroPost = allPosts[0]
-  // const morePosts = allPosts.slice(1)
-  console.log("heroSectionData", heroSectionData)
-  console.log(teamSectionData)
-
-  const MapSection = dynamic(() => import("../components/map"), {
-    ssr: false
-  });
-
-  console.log("mapSectionData.map_pointers", mapSectionData.map_pointers)
-
   return (
     <>
       <Layout>
@@ -45,31 +38,27 @@ const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
           <script src="js/leaflet-providers.js"></script>
         </Head>
         <Container>
-        <MapSection map_pointers={mapSectionData.map_pointers}/>
-        {/* <RenderMap /> */}
-
-          {/* {heroPost && (
-            <HeroPost
-              title={heroPost.title}
-              coverImage={heroPost.coverImage}
-              date={heroPost.date}
-              author={heroPost.author}
-              slug={heroPost.slug}
+          <div className="flex justify-end flex-col">
+            <h1 className="text-6xl uppercase">boxtribute</h1>
+            <Typewriter
+              options={{
+                strings: ['Hello', 'World'],
+                autoStart: true,
+                loop: true}}
+ 
+                  
+                  
+                  
+             
             />
-          )}
-          {morePosts.length > 0 && <MoreStories posts={morePosts} />} */}
-          {/* <HeroSection data={heroSectionData} /> */}
-          <TeamSection team_members={teamSectionData.team_members} />
-          
-          {/* <MapSection map_pointers={[]}/> */}
-
+          </div>
         </Container>
       </Layout>
     </>
-  )
-}
+  );
+};
 
-export default Index
+export default Index;
 
 export const getStaticProps = async () => {
   // const allPosts = getAllPosts([
@@ -80,17 +69,16 @@ export const getStaticProps = async () => {
   //   'coverImage',
   // ])
 
-  const heroSectionData = getPostBySlug("hero-section")
-  const teamSectionData = getPostBySlug("team")
-  const mapSectionData = getPostBySlug("our_impact/map-pointers")
+  const heroSectionData = getPostBySlug("hero-section");
+  const teamSectionData = getPostBySlug("team");
+  const mapSectionData = getPostBySlug("our_impact/map-pointers");
 
   console.log("mapSectionData", mapSectionData);
-  
 
   console.log("heroSectionData", heroSectionData);
   console.log("teamSectionData", teamSectionData);
 
   return {
-    props: { heroSectionData, teamSectionData, mapSectionData }
-  }
-}
+    props: { heroSectionData, teamSectionData, mapSectionData },
+  };
+};

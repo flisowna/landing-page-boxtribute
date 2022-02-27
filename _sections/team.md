@@ -17,8 +17,8 @@ team_members:
   picture: "/uploads/hans.png"
   link: ''
 - picture: "/uploads/vahid.png"
-  name: Vahid Bazzaz
-  role: Developer
+  name: Vahid der Niedliche
+  role: Sprecher
   link: https://github.com/vahidbazzaz
 
 ---
