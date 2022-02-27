@@ -1,5 +1,10 @@
 ---
 map_pointers:
+- nameplace: Paris
+  nameorganisation: Boxtribute
+  description: ''
+  lat: 48.857148
+  long: 2.361126
 - nameplace: Tehran
   nameorganisation: Boxtribute
   lat: 35.722938

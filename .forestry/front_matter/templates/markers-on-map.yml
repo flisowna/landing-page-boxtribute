@@ -51,8 +51,8 @@ fields:
   config:
     min: 
     max: 
-    labelField: 
-  label: details of the markers
-  description: a form for placing a new marker on the map
+    labelField: nameplace
+  description: a form for placing a new pointer on the map
+  label: pointer on the map
 pages:
 - _sections/our_impact/map-pointers.md
