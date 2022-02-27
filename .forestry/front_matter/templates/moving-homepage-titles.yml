@@ -1,4 +1,17 @@
 ---
 label: Moving homepage titles
 hide_body: true
-fields: []
+fields:
+- name: subtitles
+  type: field_group_list
+  fields:
+  - name: text
+    type: text
+    config:
+      required: false
+    label: text
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: 'list of moving subtitles '
