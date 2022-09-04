@@ -5,7 +5,7 @@ team_members:
   picture: "/uploads/roanna.png"
   link: ''
 - name: Philipp der Gemütliche
-  role: role
+  role: Dart Master
   picture: "/uploads/philip.png"
   link: ''
 - name: Dani der Susse
