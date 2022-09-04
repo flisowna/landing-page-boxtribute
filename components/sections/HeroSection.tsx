@@ -9,10 +9,10 @@ export interface HeroSectionData {
 }
 
 interface Props {
-    data: HeroSectionData
+    heroSectionData: HeroSectionData
 }
 
-export const HeroSection = ({ data: heroSectionData }: Props) => {
+export const HeroSection = ({ heroSectionData }: Props) => {
     return <section className="flex-col md:flex-row flex items-center md:justify-between mt-16 mb-16 md:mb-12">
         <div className="z-0 h-60 w-80 relative">
             <Image

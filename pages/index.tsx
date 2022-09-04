@@ -45,14 +45,10 @@ const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
                 strings: ['Hello', 'World'],
                 autoStart: true,
                 loop: true}}
- 
-                  
-                  
-                  
-             
             />
           </div>
         </Container>
+        <HeroSection heroSectionData={heroSectionData}/>
       </Layout>
     </>
   );
