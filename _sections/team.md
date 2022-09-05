@@ -2,7 +2,11 @@
 team_members:
 - name: name surname
   role: role
-  picture: "/uploads/roanna.png"
+  picture: ''
+  link: ''
+- name: Babak
+  role: A Boxtribute hero
+  picture: public/uploads/boy_in_red-1.png
   link: ''
 - name: Philipp der Gemütliche
   role: Dart Master
