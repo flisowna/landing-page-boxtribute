@@ -37,17 +37,7 @@ const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
           <title>Boxtribute</title>
           <script src="js/leaflet-providers.js"></script>
         </Head>
-        <Container>
-          <div className="flex justify-end flex-col">
-            <h1 className="text-6xl uppercase">boxtribute</h1>
-            <Typewriter
-              options={{
-                strings: ['Hello', 'World'],
-                autoStart: true,
-                loop: true}}
-            />
-          </div>
-        </Container>
+        
         <HeroSection heroSectionData={heroSectionData}/>
       </Layout>
     </>
@@ -67,14 +57,16 @@ export const getStaticProps = async () => {
 
   const heroSectionData = getPostBySlug("hero-section");
   const teamSectionData = getPostBySlug("team");
-  const mapSectionData = getPostBySlug("our_impact/map-pointers");
+  // const mapSectionData = getPostBySlug("our_impact/map-pointers");
 
-  console.log("mapSectionData", mapSectionData);
+  // console.log("mapSectionData", mapSectionData);
 
   console.log("heroSectionData", heroSectionData);
   console.log("teamSectionData", teamSectionData);
 
   return {
-    props: { heroSectionData, teamSectionData, mapSectionData },
+    props: { heroSectionData, teamSectionData, 
+      // mapSectionData 
+    },
   };
 };

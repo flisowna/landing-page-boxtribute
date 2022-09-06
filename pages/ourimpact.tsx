@@ -14,7 +14,7 @@ export const OurImpact = ({ mapSectionData }: Props) => {
   return (
     <div>
       <h1>Our Impact</h1>
-      <MapSection map_pointers={mapSectionData.map_pointers} />
+      {/* <MapSection map_pointers={mapSectionData.map_pointers} /> */}
     </div>
   );
 };

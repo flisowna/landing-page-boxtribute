@@ -3,9 +3,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        'accent-1': '#FAFAFA',
-        'accent-2': '#EAEAEA',
-        'accent-7': '#333',
+        red: '#EF4049',
+        navy: '#29335F',
+        blue: '#ABCFE3',
+        gray: '#EAEAED',
         success: '#0070f3',
         cyan: '#79FFE1',
       },
@@ -22,7 +23,7 @@ module.exports = {
         '5xl': '2.5rem',
         '6xl': '2.75rem',
         '7xl': '4.5rem',
-        '8xl': '6.25rem',
+        '8xl': '10rem',
       },
       boxShadow: {
         small: '0 5px 10px rgba(0, 0, 0, 0.12)',

@@ -4,7 +4,7 @@ import Meta from "../meta"
 
 export default function Layout({ children }) {
   return (
-    <div className="m-5">
+    <div>
     <Meta />
       <Navbar />
       <main>{children}</main>
