@@ -14,17 +14,9 @@ export const OurImpact = ({ mapSectionData }: Props) => {
   return (
     <div>
       <h1>Our Impact</h1>
-      {/* <MapSection map_pointers={mapSectionData.map_pointers} /> */}
     </div>
   );
 };
 
 export default OurImpact;
 
-export const getStaticProps = async () => {
-  const mapSectionData = getPostBySlug("our_impact/map-pointers");
-
-  return {
-    props: { mapSectionData },
-  };
-};
