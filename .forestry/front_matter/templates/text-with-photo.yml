@@ -19,3 +19,4 @@ fields:
   label: image
 pages:
 - _sections/aboutus/1_part.md
+- _sections/aboutus/2_part.md
