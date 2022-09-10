@@ -25,6 +25,7 @@ sections:
   create: all
   match: "**/*"
   templates:
+  - title-with-text
   - text-with-photo
 - type: heading
   label: Partners
