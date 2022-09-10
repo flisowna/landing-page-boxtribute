@@ -6,14 +6,6 @@ webhook_url:
 sections:
 - type: heading
   label: Home
-- type: directory
-  path: _sections
-  label: Hero
-  create: all
-  match: "**/*"
-  new_doc_ext: md
-  templates:
-  - moving-homepage-titles
 - type: heading
   label: Our Impact
 - type: directory
@@ -28,7 +20,7 @@ sections:
 - type: heading
   label: About Us
 - type: directory
-  path: _sections
+  path: _sections/aboutus
   label: Story about Boxtribute
   create: all
   match: "**/*"
