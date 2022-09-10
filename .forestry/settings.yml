@@ -30,7 +30,7 @@ sections:
 - type: heading
   label: Partners
 - type: heading
-  label: News
+  label: Contact
 - type: document
   path: _sections/team-member.md
   label: team-member
