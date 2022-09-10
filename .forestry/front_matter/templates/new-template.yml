@@ -34,5 +34,3 @@ fields:
     max: 
     labelField: 
   label: list of members repeatable
-pages:
-- _sections/team.md

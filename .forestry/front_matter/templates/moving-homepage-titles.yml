@@ -15,5 +15,3 @@ fields:
     max: 
     labelField: 
   label: 'list of moving subtitles '
-pages:
-- _sections/subtitles.md
