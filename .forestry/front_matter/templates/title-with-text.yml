@@ -25,3 +25,5 @@ fields:
     schema:
       format: markdown
   label: text_2
+pages:
+- _sections/aboutus/our-story.md
