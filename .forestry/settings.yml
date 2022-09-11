@@ -21,7 +21,7 @@ sections:
   label: About Us
 - type: directory
   path: _sections/aboutus
-  label: title of the page
+  label: Title of the page
   create: all
   match: "*"
   templates:
@@ -43,7 +43,7 @@ sections:
   - title-with-text
 - type: directory
   path: _sections/aboutus/legal
-  label: legal description
+  label: Legal description
   create: all
   match: "*"
   templates:
