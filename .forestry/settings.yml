@@ -26,17 +26,6 @@ sections:
   match: "**/*"
   templates:
   - about-us
-- type: directory
-  path: _sections/aboutus
-  label: Section About Us
-  create: all
-  match: "*"
-  templates:
-  - title-with-text
-  - intro-pictures-and-title
-  - text-with-photo
-  - text
-  - new-template
 - type: heading
   label: Partners
 - type: heading
