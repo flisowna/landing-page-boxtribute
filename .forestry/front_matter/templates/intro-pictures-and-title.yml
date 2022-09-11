@@ -26,5 +26,3 @@ fields:
     max: 
     labelField: 
   label: Image with description
-pages:
-- _sections/aboutus/intro/about-us.md

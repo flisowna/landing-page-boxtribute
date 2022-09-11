@@ -20,14 +20,14 @@ sections:
 - type: heading
   label: About Us
 - type: directory
-  path: _sections/aboutus/intro
+  path: _sections
   label: Intro
   create: all
   match: "*"
   templates:
   - intro-pictures-and-title
 - type: directory
-  path: _sections/aboutus/story
+  path: _sections
   label: Story of Boxtribute
   create: all
   match: "*"
@@ -35,14 +35,14 @@ sections:
   - text-with-photo
   - title-with-text
 - type: directory
-  path: _sections/aboutus/legal
+  path: _sections
   label: Legal description
   create: all
   match: "*"
   templates:
   - text
 - type: directory
-  path: _sections/aboutus/team
+  path: _sections
   label: Team
   create: all
   match: "*"
