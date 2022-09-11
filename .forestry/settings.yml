@@ -35,6 +35,13 @@ sections:
   - text-with-photo
   - title-with-text
 - type: directory
+  path: _sections/aboutus/legal
+  label: legal description
+  create: all
+  match: "*"
+  templates:
+  - text
+- type: directory
   path: _sections/aboutus/team
   label: Team
   create: all
