@@ -11,3 +11,5 @@ fields:
     schema:
       format: markdown
   label: text
+pages:
+- _sections/aboutus/legal/legal.md
