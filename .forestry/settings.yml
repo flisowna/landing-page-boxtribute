@@ -20,6 +20,13 @@ sections:
 - type: heading
   label: About Us
 - type: directory
+  path: _sections
+  label: about us template
+  create: all
+  match: "**/*"
+  templates:
+  - about-us
+- type: directory
   path: _sections/aboutus
   label: Section About Us
   create: all
