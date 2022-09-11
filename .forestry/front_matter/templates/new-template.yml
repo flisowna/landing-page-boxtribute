@@ -29,6 +29,16 @@ fields:
       required: false
     label: link
     description: link (github, linkedin) of the team member
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: description
+    description: text about the person
   config:
     min: 
     max: 
