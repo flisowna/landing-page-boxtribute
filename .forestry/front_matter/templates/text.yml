@@ -13,3 +13,4 @@ fields:
   label: text
 pages:
 - _sections/aboutus/legal/legal.md
+- _sections/aboutus/team/title_team.md
