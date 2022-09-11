@@ -35,3 +35,5 @@ fields:
   config: {}
   template: intro-pictures-and-title
   label: team
+pages:
+- _sections/about-us.md
