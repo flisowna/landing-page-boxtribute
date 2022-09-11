@@ -20,19 +20,27 @@ sections:
 - type: heading
   label: About Us
 - type: directory
+  path: _sections/aboutus/story
+  label: Story of Boxtribute
+  create: all
+  match: "*"
+  templates:
+  - text-with-photo
+  - title-with-text
+- type: directory
   path: _sections/aboutus/team
   label: Team
   create: all
   match: "*"
   templates:
   - new-template
-- type: document
-  path: _sections/team-member.md
-  label: team-member
 - type: heading
   label: Partners
 - type: heading
   label: Contact
+- type: document
+  path: _sections/team-member.md
+  label: team-member
 - type: document
   path: _sections/hero-section.md
   label: Hero1
