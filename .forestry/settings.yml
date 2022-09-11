@@ -20,10 +20,10 @@ sections:
 - type: heading
   label: About Us
 - type: directory
-  path: _sections/aboutus
+  path: _sections/aboutus/team
   label: Team
   create: all
-  match: "**/*"
+  match: "*"
   templates:
   - new-template
 - type: document
