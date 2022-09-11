@@ -19,10 +19,6 @@ sections:
   label: Get Involved
 - type: heading
   label: About Us
-- type: document
-  path: _sections/aboutus
-  label: Title
-  match: "**/*"
 - type: directory
   path: _sections/aboutus
   label: Story about Boxtribute
@@ -31,6 +27,13 @@ sections:
   templates:
   - title-with-text
   - text-with-photo
+- type: directory
+  path: _sections/aboutus
+  label: Team
+  create: all
+  match: "**/*"
+  templates:
+  - new-template
 - type: heading
   label: Partners
 - type: heading
