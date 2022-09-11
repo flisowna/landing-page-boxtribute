@@ -13,7 +13,7 @@ export type Items = {
 }
 
 
-export function getPostBySlug(slug: string) {
+export function getDataBySlug(slug: string) {
   const realSlug = slug.replace(/\.md$/, '')
   const fullPath = join(postsDirectory, `${realSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')

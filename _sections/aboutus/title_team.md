@@ -1,4 +1,0 @@
----
-text: Meet the Team
-
----

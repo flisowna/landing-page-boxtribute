@@ -2,7 +2,7 @@ import {
   TeamSection,
   ITeamSectionData,
 } from "../components/sections/TeamSection";
-import { getPostBySlug } from "../lib/api";
+import { getDataBySlug } from "../lib/api";
 
 type Props = {
   teamSectionData: ITeamSectionData;
@@ -19,7 +19,7 @@ export const AboutUs = ({ teamSectionData }: Props) => {
 export default AboutUs;
 
 export const getStaticProps = async () => {
-  const teamSectionData = getPostBySlug("team");
+  const teamSectionData = getDataBySlug("team");
 
   return {
     props: { teamSectionData },
