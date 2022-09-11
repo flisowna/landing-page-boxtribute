@@ -30,3 +30,5 @@ fields:
     required: false
   label: description of the image
   description: short description of the image for accessibility
+pages:
+- _sections/aboutus/story/1_part.md
