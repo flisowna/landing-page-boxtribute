@@ -20,13 +20,6 @@ sections:
 - type: heading
   label: About Us
 - type: directory
-  path: _sections/aboutus
-  label: Title of the page
-  create: all
-  match: "*"
-  templates:
-  - text
-- type: directory
   path: _sections/aboutus/intro
   label: Intro
   create: all
