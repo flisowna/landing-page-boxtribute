@@ -1,4 +1,37 @@
 ---
 label: about us
 hide_body: true
-fields: []
+fields:
+- name: intro_title_and_pictures
+  type: include
+  config: {}
+  template: intro-pictures-and-title
+  label: intro title and pictures
+- name: intro_text
+  type: include
+  config: {}
+  template: title-with-text
+  label: intro_text
+- name: story_in_parts
+  type: field_group_list
+  fields:
+  - name: part_story
+    type: include
+    config: {}
+    template: text-with-photo
+    label: part_story
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: story in parts
+- name: legal_text
+  type: include
+  config: {}
+  template: text
+  label: legal text
+- name: team
+  type: include
+  config: {}
+  template: intro-pictures-and-title
+  label: team
