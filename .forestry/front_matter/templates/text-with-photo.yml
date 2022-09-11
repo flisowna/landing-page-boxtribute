@@ -2,16 +2,23 @@
 label: Text with Photo
 hide_body: true
 fields:
-- name: text
-  type: textarea
-  default: ''
+- name: paragraphs
+  type: field_group_list
+  fields:
+  - name: paragraph
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: paragraph
   config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: Text
-  description: long text
+    min: 
+    max: 
+    labelField: 
+  label: paragraphs of text
 - name: image
   type: file
   config:
