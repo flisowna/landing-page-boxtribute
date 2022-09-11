@@ -20,16 +20,12 @@ sections:
 - type: heading
   label: About Us
 - type: directory
-  path: _sections/aboutus
-  label: Section About Us
+  path: _sections
+  label: about us section
   create: all
-  match: "*"
+  match: "**/*"
   templates:
-  - title-with-text
-  - intro-pictures-and-title
-  - text-with-photo
-  - text
-  - new-template
+  - about-us
 - type: heading
   label: Partners
 - type: heading
