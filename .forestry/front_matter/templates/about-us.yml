@@ -11,20 +11,20 @@ fields:
   type: include
   config: {}
   template: title-with-text
-  label: intro_text
-- name: story_in_parts
+  label: intro text our story
+- name: the_story_with_images
   type: field_group_list
   fields:
-  - name: part_story
+  - name: part_of_our_story
     type: include
     config: {}
     template: text-with-photo
-    label: part_story
+    label: part of our story
   config:
     min: 
     max: 
     labelField: 
-  label: story in parts
+  label: the story with images
 - name: legal_text
   type: include
   config: {}
