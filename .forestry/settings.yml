@@ -19,6 +19,10 @@ sections:
   label: Get Involved
 - type: heading
   label: About Us
+- type: document
+  path: _sections/aboutus/intro.md
+  label: intro
+  match: "**/*"
 - type: directory
   path: _sections/aboutus/story
   label: Story of Boxtribute
