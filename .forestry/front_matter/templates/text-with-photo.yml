@@ -32,3 +32,4 @@ fields:
   description: short description of the image for accessibility
 pages:
 - _sections/aboutus/story/1_part.md
+- _sections/aboutus/story/2_part.md
