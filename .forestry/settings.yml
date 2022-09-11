@@ -25,6 +25,9 @@ sections:
   create: all
   match: "*"
   templates:
+  - intro-pictures-and-title
+  - title-with-text
+  - text-with-photo
   - text
   - new-template
 - type: heading
