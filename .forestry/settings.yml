@@ -21,7 +21,7 @@ sections:
   label: About Us
 - type: directory
   path: _sections
-  label: about us template
+  label: about us section
   create: all
   match: "**/*"
   templates:
