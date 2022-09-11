@@ -21,26 +21,18 @@ sections:
   label: About Us
 - type: directory
   path: _sections/aboutus
-  label: Story about Boxtribute
-  create: all
-  match: "**/*"
-  templates:
-  - title-with-text
-  - text-with-photo
-- type: directory
-  path: _sections/aboutus
   label: Team
   create: all
   match: "**/*"
   templates:
   - new-template
+- type: document
+  path: _sections/team-member.md
+  label: team-member
 - type: heading
   label: Partners
 - type: heading
   label: Contact
-- type: document
-  path: _sections/team-member.md
-  label: team-member
 - type: document
   path: _sections/hero-section.md
   label: Hero1
