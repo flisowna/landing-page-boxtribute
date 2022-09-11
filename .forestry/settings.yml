@@ -47,6 +47,7 @@ sections:
   create: all
   match: "*"
   templates:
+  - text
   - new-template
 - type: heading
   label: Partners
