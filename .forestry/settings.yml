@@ -20,29 +20,7 @@ sections:
 - type: heading
   label: About Us
 - type: directory
-  path: _sections/aboutus/intro
-  label: Intro
-  create: all
-  match: "*"
-  templates:
-  - intro-pictures-and-title
-- type: directory
-  path: _sections/aboutus/story
-  label: Story of Boxtribute
-  create: all
-  match: "*"
-  templates:
-  - text-with-photo
-  - title-with-text
-- type: directory
-  path: _sections/aboutus/legal
-  label: Legal description
-  create: all
-  match: "*"
-  templates:
-  - text
-- type: directory
-  path: _sections/aboutus/team
+  path: _sections/aboutus
   label: Team
   create: all
   match: "*"
