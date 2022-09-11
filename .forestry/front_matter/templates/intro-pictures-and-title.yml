@@ -1,4 +1,13 @@
 ---
 label: intro pictures and title
 hide_body: true
-fields: []
+fields:
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: pictures
+  type: image_gallery
+  config: {}
+  label: pictures
