@@ -1,4 +1,124 @@
 ---
 label: about_us
 hide_body: true
-fields: []
+fields:
+- name: title_of_the_page
+  type: text
+  config:
+    required: false
+  label: title of the page
+- name: hero_pictures
+  type: image_gallery
+  config: {}
+  label: hero pictures
+- name: title_of_the_story
+  type: text
+  config:
+    required: false
+  label: title of the story section
+- name: paragraph_s_group_intro
+  type: field_group_list
+  fields:
+  - name: paragraph_for_the_intro
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: paragraph for the intro
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: paragraph's group for the intro
+- name: text_with_picture_for_the_story
+  type: field_group_list
+  fields:
+  - name: picture
+    type: file
+    config:
+      maxSize: 64
+    label: picture
+    description: picture for the story
+  - name: paragraph_s_group
+    type: field_group_list
+    fields:
+    - name: paragraph
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: paragraph
+      description: paragraph for the story
+    config:
+      min: 
+      max: 
+      labelField: 
+    label: paragraph's group
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: text with picture for the story
+- name: text_legal
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: text legal
+- name: title_for_the_team_section
+  type: text
+  config:
+    required: false
+  label: title for the team section
+- name: team_member
+  type: field_group_list
+  fields:
+  - name: name
+    type: text
+    config:
+      required: false
+    label: name
+  - name: surname
+    type: text
+    config:
+      required: false
+    label: surname
+  - name: role
+    type: text
+    config:
+      required: false
+    label: role
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: image
+  - name: description
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: description
+  - name: link
+    type: text
+    config:
+      required: false
+    label: link
+    description: link to social media (github/linkedin)
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: team member
