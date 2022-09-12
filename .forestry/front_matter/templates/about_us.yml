@@ -7,10 +7,25 @@ fields:
   config:
     required: false
   label: title of the page
-- name: hero_pictures
-  type: image_gallery
-  config: {}
-  label: hero pictures
+- name: hero_images_with_description
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: image
+  - name: description
+    type: text
+    config:
+      required: false
+    label: description
+    description: description for accessibility
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: hero images with description
 - name: title_of_the_story
   type: text
   config:
@@ -60,6 +75,12 @@ fields:
       max: 
       labelField: 
     label: paragraph's group
+  - name: description_for_the_image
+    type: text
+    config:
+      required: false
+    label: description of the image
+    description: description of the image for accessibility
   config:
     min: 
     max: 
