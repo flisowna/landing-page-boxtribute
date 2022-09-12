@@ -6,6 +6,13 @@ webhook_url:
 sections:
 - type: directory
   path: _sections/aboutus
+  label: about us section
+  create: all
+  match: "**/*"
+  templates:
+  - about_us
+- type: directory
+  path: _sections/aboutus
   label: about us
   create: all
   match: "*"
@@ -26,13 +33,6 @@ sections:
   label: Get Involved
 - type: heading
   label: About Us
-- type: directory
-  path: _sections
-  label: about us section
-  create: all
-  match: "**/*"
-  templates:
-  - about-us
 - type: heading
   label: Partners
 - type: heading
