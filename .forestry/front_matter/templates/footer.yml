@@ -1,4 +1,32 @@
 ---
 label: footer
 hide_body: true
-fields: []
+fields:
+- name: boxtribute_logo
+  type: file
+  config:
+    maxSize: 64
+  label: boxtribute logo
+- name: social_media_icons
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: image
+  - name: description
+    type: text
+    config:
+      required: false
+    label: description
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: social media icons
+- name: boxtribute_trademark
+  type: text
+  config:
+    required: false
+  label: boxtribute trademark
