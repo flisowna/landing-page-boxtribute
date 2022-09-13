@@ -31,6 +31,13 @@ sections:
   - markers-on-map
 - type: heading
   label: Get Involved
+- type: directory
+  path: _sections/getinvolved
+  label: get involved
+  create: all
+  match: "**/*"
+  templates:
+  - get-involved
 - type: heading
   label: About Us
 - type: directory
