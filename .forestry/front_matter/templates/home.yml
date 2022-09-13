@@ -1,4 +1,133 @@
 ---
 label: home
 hide_body: true
-fields: []
+fields:
+- name: page_title
+  type: text
+  config:
+    required: false
+  label: page title
+- name: subtitles_hero
+  type: field_group_list
+  fields:
+  - name: text_for_typing
+    type: text
+    config:
+      required: false
+    label: text for typing
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: subtitles hero
+- name: hero_image
+  type: file
+  config:
+    maxSize: 64
+  label: hero_image
+- name: cta_button
+  type: text
+  config:
+    required: false
+  label: CTA button
+- name: short_description
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: short description
+- name: facts_in_numbers
+  type: field_group_list
+  fields:
+  - name: icon
+    type: file
+    config:
+      maxSize: 64
+    label: icon
+  - name: description
+    type: text
+    config:
+      required: false
+    label: description
+  - name: number
+    type: number
+    label: number
+    description: ''
+    default: 0
+    required: true
+    config:
+      min: 
+      max: 
+      step: 
+  - name: color
+    type: text
+    config:
+      required: false
+    label: color
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: facts in numbers
+- name: news_list
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: image
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  - name: headline
+    type: text
+    config:
+      required: false
+    label: headline
+  - name: text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: text
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: news list
+- name: more_info
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: image
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  - name: text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: text
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: more info
