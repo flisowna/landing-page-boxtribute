@@ -67,6 +67,11 @@ fields:
     config:
       required: false
     label: color
+  - name: image_description
+    type: text
+    config:
+      required: false
+    label: image_description
   config:
     min: 
     max: 
@@ -99,6 +104,11 @@ fields:
       schema:
         format: markdown
     label: text
+  - name: image_description
+    type: text
+    config:
+      required: false
+    label: image_description
   config:
     min: 
     max: 
@@ -126,6 +136,11 @@ fields:
       schema:
         format: markdown
     label: text
+  - name: image_description
+    type: text
+    config:
+      required: false
+    label: image_description
   config:
     min: 
     max: 
