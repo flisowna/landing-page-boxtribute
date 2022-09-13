@@ -1,36 +1,37 @@
 ---
 page_title: Boxtribute
+hero_image_description: children in a refugee camp
 subtitles_hero:
 - text_for_typing: 3By aid workers, for aid workers!
 - text_for_typing: 2By aid workers, for aid workers!
 - text_for_typing: By aid workers, for aid workers!
-hero_image: public/uploads/hero_picture.png
+hero_image: /uploads/hero_picture.png
 cta_button: Join Today
 short_description: Boxtribute is a digital system  that works hand in hand with our
   partners to deliver humanitarian aid quickly and fairly.
 facts_in_numbers:
-- icon: public/uploads/handshake.svg
+- icon: /uploads/handshake.png
   description: beneficiaries thanks to collected aid
-  number: 33452
+  number: 334
   color: blue
-  image_description: ''
-- icon: public/uploads/trolly.svg
+  image_description: 'handshake'
+- icon: /uploads/trolly.png
   description: goods distributed per month to give back dignity to vulnerable populations
-  number: 3334
+  number: 333
   color: navy
   image_description: boxes on a trolly
-- icon: public/uploads/boxes.svg
+- icon: /uploads/boxes.png
   description: items in storage donated to support conflicted area
   number: 2930
   color: blue
   image_description: boxes icon
-- icon: public/uploads/hearthand.svg
+- icon: /uploads/hearthand.png
   description: partners on the field helping refugees
   number: 14
   color: navy
   image_description: heart on the hand
 news_list:
-- image: public/uploads/people_on_boat.png
+- image: /uploads/people_on_boat.png
   title: news from the field - serbia
   headline: Did you know that one of our Boxtribute volunteers was part of the Sea-Eye
     December mission a few months ago?
@@ -40,7 +41,7 @@ news_list:
     contact with the boat in distress, helping to calm and control the situation.
   image_description: people on a rescue boat
   link: https://wyborcza.pl/0,0.html
-- image: public/uploads/two_people_with_laptops.png
+- image: /uploads/two_people_with_laptops.png
   title: April hackathon
   headline: 'Every month, our dev team meets up for an entire weekend to take advantage
     of their combined coding powers, fine tuning the '
@@ -49,28 +50,26 @@ news_list:
     to Iran to Hong Kong - everyone gets involved!
   link: https://wyborcza.pl/0,0.html
 more_info:
-- image: public/uploads/family_close_up.png
+- image: /uploads/family_close_up.png
   title: Did You Know
   image_description: a family in a refugee camp
   text: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
     sed quia.
   link: https://wyborcza.pl/0,0.html
-- image: public/uploads/boy_in_red-1.png
+- image: /uploads/boy_in_red-1.png
   title: March Hackathon
   text: 'Every month, our dev team meets up for an entire weekend to take advantage
     of their combined coding powers, fine tuning the Boxtribute system for our partners!
     Despite the time difference - from Germany to Iran to Hong Kong - everyone gets
-    involved!
-
-    '
+    involved!'
   image_description: 'children playing in a refugee camp '
   link: https://wyborcza.pl/0,0.html
-- image: public/uploads/people_on_boat.png
+- image: /uploads/people_on_boat.png
   title: Did You Know
   text: Did you know that one of our Boxtribute volunteers was part of the Sea-Eye
     December mission a few months ago?
   image_description: people on a rescue boat
   link: https://wyborcza.pl/0,0.html
-cta_link: ''
+cta_link: '/aboutus'
 
 ---

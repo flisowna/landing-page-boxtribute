@@ -1,38 +1,49 @@
-import Link from "next/link"
-import Facebook from "public/uploads/facebook.svg"
+import Link from "next/link";
+import Facebook from "public/uploads/facebook.svg";
+import { getDataBySlug } from "../../lib/api";
 
-export const Footer = () => {
-    return (
-      <section className="bg-navy py-16">
-         <div className="flex flex-col items-center">
-          <img className="h-42" src="/uploads/boxtribute_white.png"/>
-          <div className="flex flex-col">
-          <Link href="/">
-            <a>
-              <img className="h-42" alt="instagram icon" src="/uploads/instagram.svg"/>
-            </a>
-            </Link>
-          <Link href="/">
-            <a>
-              <img className="h-42" alt="facebook icon" src="/uploads/facebook.svg"/>
-            </a>
-            </Link>
-            <Link href="/">
-            <a>
-              <img className="h-42" alt="linkedin icon" src="/uploads/linkedin.svg"/>
-            </a>
-            </Link>
-            <Link href="/">
-            <a>
-              <img className="h-42" alt="github icon" src="/uploads/github.svg"/>
-            </a>
-            </Link>
-          </div>
-        </div>
-<img src='/uploads/facebook.svg'/>
-      </section>
-        
-      )
+type ISocialMedia = {
+  image: string;
+  description: string;
+  link: string;
+};
+
+interface IFooterData {
+  boxtribute_logo: string;
+  social_media_icons: ISocialMedia[];
+  boxtribute_trademark: string;
 }
 
-export default Footer
+export interface Props {
+  footerData: IFooterData;
+}
+
+export const Footer = ({ footerData }: Props) => {
+  return (
+    <section className="bg-navy py-16">
+      <div className="flex flex-col items-center">
+        <img className="h-42" src={footerData.boxtribute_logo} />
+        <div className="flex flex-col">
+          {footerData.social_media_icons.map((e) => (
+            <Link href={e.link}>
+              <a>
+                <img className="h-42" alt={e.description} src={e.image} />
+              </a>
+            </Link>
+          ))}
+        </div>
+        <h3>{footerData.boxtribute_trademark}</h3>
+      </div>
+    </section>
+  );
+};
+
+export default Footer;
+
+export const getStaticProps = async () => {
+  const footerData = getDataBySlug("footer/footer_data");
+
+  return {
+    props: { footerData },
+  };
+};

@@ -1,16 +1,16 @@
 ---
-boxtribute_logo: public/uploads/boxtribute_white.png
+boxtribute_logo: /uploads/boxtribute_white.png
 social_media_icons:
-- image: public/uploads/github.svg
+- image: /uploads/github.svg
   description: github icon
   link: https://wyborcza.pl/0,0.html
-- image: public/uploads/instagram.svg
+- image: /uploads/instagram.svg
   description: instargam icon
   link: https://wyborcza.pl/0,0.html
-- image: public/uploads/facebook.svg
+- image: /uploads/facebook.svg
   description: facebook icon
   link: https://wyborcza.pl/0,0.html
-- image: public/uploads/linkedin.svg
+- image: /uploads/linkedin.svg
   description: linkedin icon
   link: https://wyborcza.pl/0,0.html
 boxtribute_trademark: "© Boxtribute, Inc. 2022."

@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export const Navbar = () => {
   return (
-    <div className="flex justify-between my-4 mx-8">
+    <div className="flex justify-between my-4 mx-8 z-10">
       <Link href="/">
         <a className="flex items-center">
           <img className="h-14" src="/boxtribute-logo.png"></img>
