@@ -37,6 +37,12 @@ sections:
   label: Partners
 - type: heading
   label: Contact
+- type: heading
+  label: FOOTER
+- type: document
+  path: _sections/footer.md
+  label: 'footer '
+  match: "**/*"
 - type: document
   path: _sections/aboutus/team-member.md
   label: team-member
