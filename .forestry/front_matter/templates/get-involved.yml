@@ -174,13 +174,21 @@ fields:
       required: false
     label: title
   - name: description
-    type: textarea
-    default: ''
+    type: field_group_list
+    fields:
+    - name: paragraph
+      type: textarea
+      default: ''
+      config:
+        required: false
+        wysiwyg: false
+        schema:
+          format: markdown
+      label: paragraph
     config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
+      min: 
+      max: 
+      labelField: 
     label: description
   config:
     min: 
