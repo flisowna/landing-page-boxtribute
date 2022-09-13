@@ -1,5 +1,5 @@
 ---
-hero_image: public/uploads/people_in_tent.png
+hero_image: /uploads/people_in_tent.png
 image_description: people in front of tents in a refugee camp
 page_title: make a difference
 cta_button: get involved
@@ -8,7 +8,7 @@ main_subtitle: Together we can make a difference.
 paragraphs_group:
 - paragraph: Find out how you can get involved and help refugees all around the world.
 - paragraph: 'We propose various solutions, there is one for you. '
-image_1: public/uploads/medical_help.png
+image_1: /uploads/medical_help.png
 image_1_description: woman taking care of injured patient
 description_1: Boxtribute is a digital system  that works hand in hand with our partners
   to deliver humanitarian aid quickly and fairly.
@@ -40,12 +40,12 @@ list_of_items:
 - paragraph: reflect best practice in humanitarian logistics
 - paragraph: foster a shared common/open ecosystem for aid organisations to better
     meet individual needs
-image_3: public/uploads/woman_with_kid.png
+image_3: /uploads/woman_with_kid.png
 image_3_description: woman offering clothes to a child
 description_4: Boxtribute is a digital system  that works hand in hand with our partners
   to deliver humanitarian aid quickly and fairly.
 list_of_looked_for:
-- image: public/uploads/artificial-intelligence.svg
+- image: /uploads/artificial-intelligence.svg
   title: technology
   description:
   - paragraph: Developers and sysadmins - from all backgrounds and experience levels
@@ -53,7 +53,7 @@ list_of_looked_for:
       app to a modern Python/Flask and ReactJS stack with GraphQL on the data layer,
       to keep providing an efficient platforms to our partners on the ground.
   image_description: 'brain icon '
-- image: public/uploads/creative.svg
+- image: /uploads/creative.svg
   title: creative
   description:
   - paragraph: Content creators - Help us create post and articles for our social
