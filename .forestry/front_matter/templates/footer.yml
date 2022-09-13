@@ -20,6 +20,11 @@ fields:
     config:
       required: false
     label: description
+  - name: link
+    type: text
+    config:
+      required: false
+    label: link
   config:
     min: 
     max: 
