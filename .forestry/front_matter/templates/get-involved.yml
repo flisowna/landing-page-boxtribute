@@ -97,15 +97,23 @@ fields:
   config:
     required: false
   label: headline_2
-- name: description_2
-  type: textarea
-  default: ''
+- name: description_2_list
+  type: field_group_list
+  fields:
+  - name: paragraph
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+    label: paragraph
   config:
-    required: false
-    wysiwyg: false
-    schema:
-      format: markdown
-  label: description_2
+    min: 
+    max: 
+    labelField: 
+  label: description_2_list
 - name: headline_3
   type: text
   config:
