@@ -39,10 +39,14 @@ sections:
   label: Contact
 - type: heading
   label: FOOTER
-- type: document
-  path: _sections/footer.md
-  label: 'footer '
+- type: directory
+  path: _sections/footer
+  label: Footer
+  create: all
   match: "**/*"
+- type: document
+  path: _sections/footer/footer.md
+  label: 'footer '
 - type: document
   path: _sections/aboutus/team-member.md
   label: team-member
