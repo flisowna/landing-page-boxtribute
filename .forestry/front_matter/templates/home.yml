@@ -131,3 +131,5 @@ fields:
     max: 
     labelField: 
   label: more info
+pages:
+- _sections/home/home_data.md
