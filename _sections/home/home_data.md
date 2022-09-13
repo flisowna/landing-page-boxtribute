@@ -9,15 +9,62 @@ cta_button: Join Today
 short_description: Boxtribute is a digital system  that works hand in hand with our
   partners to deliver humanitarian aid quickly and fairly.
 facts_in_numbers:
+- icon: public/uploads/handshake.svg
+  description: beneficiaries thanks to collected aid
+  number: 33452
+  color: blue
+  image_description: ''
+- icon: public/uploads/trolly.svg
+  description: goods distributed per month to give back dignity to vulnerable populations
+  number: 3334
+  color: navy
+  image_description: boxes on a trolly
 - icon: public/uploads/boxes.svg
   description: items in storage donated to support conflicted area
   number: 2930
   color: blue
+  image_description: boxes icon
 - icon: public/uploads/hearthand.svg
   description: partners on the field helping refugees
   number: 14
   color: navy
-news_list: []
-more_info: []
+  image_description: heart on the hand
+news_list:
+- image: public/uploads/people_on_boat.png
+  title: news from the field - serbia
+  headline: Did you know that one of our Boxtribute volunteers was part of the Sea-Eye
+    December mission a few months ago?
+  text: Sea-Eye is a civil rescue NGO working in the Mediterranean Sea and has been
+    active since 2015. With the rescue organisation, Sophie assisted people on the
+    move as a Rhib communicator, which essentially means she was the first point of
+    contact with the boat in distress, helping to calm and control the situation.
+  image_description: people on a rescue boat
+- image: public/uploads/two_people_with_laptops.png
+  title: April hackathon
+  headline: 'Every month, our dev team meets up for an entire weekend to take advantage
+    of their combined coding powers, fine tuning the '
+  image_description: two people in front of a computer
+  text: Boxtribute system for our partners! Despite the time difference - from Germany
+    to Iran to Hong Kong - everyone gets involved!
+more_info:
+- image: public/uploads/family_close_up.png
+  title: Did You Know
+  image_description: a family in a refugee camp
+  text: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+    sed quia.
+- image: public/uploads/boy_in_red-1.png
+  title: March Hackathon
+  text: 'Every month, our dev team meets up for an entire weekend to take advantage
+    of their combined coding powers, fine tuning the Boxtribute system for our partners!
+    Despite the time difference - from Germany to Iran to Hong Kong - everyone gets
+    involved!
+
+    '
+  image_description: 'children playing in a refugee camp '
+- image: public/uploads/people_on_boat.png
+  title: Did You Know
+  text: Did you know that one of our Boxtribute volunteers was part of the Sea-Eye
+    December mission a few months ago?
+  image_description: people on a rescue boat
 
 ---
