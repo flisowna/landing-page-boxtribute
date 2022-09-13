@@ -39,6 +39,7 @@ news_list:
     move as a Rhib communicator, which essentially means she was the first point of
     contact with the boat in distress, helping to calm and control the situation.
   image_description: people on a rescue boat
+  link: https://wyborcza.pl/0,0.html
 - image: public/uploads/two_people_with_laptops.png
   title: April hackathon
   headline: 'Every month, our dev team meets up for an entire weekend to take advantage
@@ -46,12 +47,14 @@ news_list:
   image_description: two people in front of a computer
   text: Boxtribute system for our partners! Despite the time difference - from Germany
     to Iran to Hong Kong - everyone gets involved!
+  link: https://wyborcza.pl/0,0.html
 more_info:
 - image: public/uploads/family_close_up.png
   title: Did You Know
   image_description: a family in a refugee camp
   text: Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
     sed quia.
+  link: https://wyborcza.pl/0,0.html
 - image: public/uploads/boy_in_red-1.png
   title: March Hackathon
   text: 'Every month, our dev team meets up for an entire weekend to take advantage
@@ -61,10 +64,13 @@ more_info:
 
     '
   image_description: 'children playing in a refugee camp '
+  link: https://wyborcza.pl/0,0.html
 - image: public/uploads/people_on_boat.png
   title: Did You Know
   text: Did you know that one of our Boxtribute volunteers was part of the Sea-Eye
     December mission a few months ago?
   image_description: people on a rescue boat
+  link: https://wyborcza.pl/0,0.html
+cta_link: ''
 
 ---

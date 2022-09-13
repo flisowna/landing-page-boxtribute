@@ -30,6 +30,11 @@ fields:
   config:
     required: false
   label: CTA button
+- name: cta_link
+  type: text
+  config:
+    required: false
+  label: CTA link
 - name: short_description
   type: textarea
   default: ''
@@ -109,6 +114,11 @@ fields:
     config:
       required: false
     label: image_description
+  - name: link
+    type: text
+    config:
+      required: false
+    label: link
   config:
     min: 
     max: 
@@ -141,6 +151,11 @@ fields:
     config:
       required: false
     label: image_description
+  - name: link
+    type: text
+    config:
+      required: false
+    label: link
   config:
     min: 
     max: 
