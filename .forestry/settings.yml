@@ -38,7 +38,7 @@ sections:
 - type: heading
   label: Contact
 - type: document
-  path: _sections/team-member.md
+  path: _sections/aboutus/team-member.md
   label: team-member
 - type: document
   path: _sections/hero-section.md

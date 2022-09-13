@@ -1,9 +1,6 @@
 import Container from "../components/container";
-import MoreStories from "../components/more-stories";
-import HeroPost from "../components/hero-post";
-import Intro from "../components/intro";
 import Layout from "../components/layout";
-import { getAllPosts, getPostBySlug, Items } from "../lib/api";
+import { getDataBySlug} from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
 import Post from "../types/post";
@@ -38,7 +35,7 @@ const Index = ({ heroSectionData, teamSectionData, mapSectionData }: Props) => {
           <script src="js/leaflet-providers.js"></script>
         </Head>
         
-        <HeroSection heroSectionData={heroSectionData}/>
+        {/* <HeroSection heroSectionData={heroSectionData}/> */}
       </Layout>
     </>
   );
@@ -55,17 +52,17 @@ export const getStaticProps = async () => {
   //   'coverImage',
   // ])
 
-  const heroSectionData = getPostBySlug("hero-section");
-  const teamSectionData = getPostBySlug("team");
+  // const heroSectionData = getDataBySlug("hero-section");
+  const teamSectionData = getDataBySlug("aboutus/team");
   // const mapSectionData = getPostBySlug("our_impact/map-pointers");
 
   // console.log("mapSectionData", mapSectionData);
 
-  console.log("heroSectionData", heroSectionData);
+  // console.log("heroSectionData", heroSectionData);
   console.log("teamSectionData", teamSectionData);
 
   return {
-    props: { heroSectionData, teamSectionData, 
+    props: { teamSectionData, 
       // mapSectionData 
     },
   };
