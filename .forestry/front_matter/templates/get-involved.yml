@@ -122,7 +122,7 @@ fields:
 - name: list_of_items
   type: field_group_list
   fields:
-  - name: bullet_item
+  - name: paragraph
     type: textarea
     default: ''
     config:
