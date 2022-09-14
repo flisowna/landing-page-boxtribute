@@ -21,19 +21,24 @@ export const Navbar = () => {
             <a className="p-2">About Us</a>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/getinvolved">
             <a className="p-2">Get Involved</a>
           </Link>
-        </li>
+        </li> */}
         <li>
           <Link href="/ourimpact">
             <a className="p-2">Our Impact</a>
           </Link>
         </li>
-        <li>
+        {/* <li>
           <Link href="/partners">
             <a className="p-2">Partners</a>
+          </Link>
+        </li> */}
+        <li>
+          <Link href="/contactus">
+            <a className="p-2">Contact Us</a>
           </Link>
         </li>
       </ul>
