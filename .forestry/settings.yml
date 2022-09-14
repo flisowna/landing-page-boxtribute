@@ -51,6 +51,13 @@ sections:
   label: Partners
 - type: heading
   label: Contact
+- type: directory
+  path: _sections/contactus
+  label: contact us
+  create: all
+  match: "**/*"
+  templates:
+  - contact-us
 - type: heading
   label: FOOTER
 - type: directory
