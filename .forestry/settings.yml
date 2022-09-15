@@ -74,8 +74,8 @@ sections:
 - type: document
   path: _sections/hero-section.md
   label: Hero1
-upload_dir: public/uploads
-public_path: public/uploads
+upload_dir: /uploads
+public_path: /uploads
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"
