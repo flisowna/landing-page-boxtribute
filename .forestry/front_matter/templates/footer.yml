@@ -36,4 +36,4 @@ fields:
     required: false
   label: boxtribute trademark
 pages:
-- _sections/footer/footer_data.md
+- data/footer/footer_data.md

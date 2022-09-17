@@ -5,7 +5,7 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: _sections/aboutus
+  path: data/aboutus
   label: about us section
   create: all
   match: "**/*"
@@ -14,7 +14,7 @@ sections:
 - type: heading
   label: Home
 - type: directory
-  path: _sections/home
+  path: data/home
   label: home
   create: all
   match: "**/*"
@@ -23,7 +23,7 @@ sections:
 - type: heading
   label: Our Impact
 - type: directory
-  path: _sections/our_impact
+  path: data/our_impact
   label: Map
   create: all
   match: "**/*"
@@ -32,7 +32,7 @@ sections:
 - type: heading
   label: Get Involved
 - type: directory
-  path: _sections/getinvolved
+  path: data/getinvolved
   label: get involved
   create: all
   match: "**/*"
@@ -41,7 +41,7 @@ sections:
 - type: heading
   label: About Us
 - type: directory
-  path: _sections/aboutus
+  path: data/aboutus
   label: about us
   create: all
   match: "*"
@@ -52,7 +52,7 @@ sections:
 - type: heading
   label: Contact
 - type: directory
-  path: _sections/contactus
+  path: data/contactus
   label: contact us
   create: all
   match: "**/*"
@@ -61,7 +61,7 @@ sections:
 - type: heading
   label: FOOTER
 - type: directory
-  path: _sections/footer
+  path: data/footer
   label: Footer
   create: all
   match: "**/*"

@@ -157,4 +157,4 @@ fields:
     labelField: 
   label: more info
 pages:
-- _sections/home/home_data.md
+- data/home/home_data.md

@@ -40,4 +40,4 @@ fields:
     required: false
   label: form title
 pages:
-- _sections/contactus/contact_us_data.md
+- data/contactus/contact_us_data.md

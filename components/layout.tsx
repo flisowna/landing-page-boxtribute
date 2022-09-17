@@ -1,22 +1,24 @@
-import Alert from './alert'
-import Footer from './footer'
-import Meta from './meta'
+import Navbar from "./Navbar"
+import Footer, {Props} from "./Footer"
+import Meta from "../meta"
+import { getDataBySlug } from "../../lib/api";
 
-type Props = {
-  preview?: boolean
-  children: React.ReactNode
-}
 
-const Layout = ({ preview, children }: Props) => {
+export default function Layout({ children}) {
   return (
-    <>
-      <Meta />
-      <div className="min-h-screen">
-        <main>{children}</main>
-      </div>
-      <Footer />
-    </>
+    <div>
+    <Meta />
+      <Navbar />
+      <main>{children}</main>
+      {/* <Footer footerData={footerData}/> */}
+    </div>
   )
 }
 
-export default Layout
+// export const getStaticProps = async () => {
+//   const footerData = getDataBySlug("footer/footer_data");
+
+//   return {
+//     props: { footerData },
+//   };
+// };

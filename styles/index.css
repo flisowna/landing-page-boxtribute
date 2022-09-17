@@ -32,3 +32,8 @@
   .toner-labels {
     filter: invert() sepia() brightness(50%) saturate(560%) hue-rotate(-220deg);
   }
+
+  .blur {
+    filter: blur(4px);
+  -webkit-filter: blur(4px);
+  }

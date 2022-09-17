@@ -2,7 +2,7 @@ import fs from 'fs'
 import { join } from 'path'
 import matter from 'gray-matter'
 
-const dataDirectory = join(process.cwd(), '_sections')
+const dataDirectory = join(process.cwd(), 'data')
 
 export function getPostSlugs() {
   return fs.readdirSync(dataDirectory)

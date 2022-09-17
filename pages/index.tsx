@@ -9,6 +9,8 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
+import AnimatedNumber from "react-animated-number";
+
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -71,18 +73,21 @@ const Index = ({ homeData }: Props) => {
 
       {/* hero section */}
       <section className="w-full h-auto  relative">
+        <div className="">
         <Image
           src={homeData.hero_image}
           alt={homeData.hero_image_description}
           width={1600}
           height={1000}
           z-0
+          className="blur"
         />
+        </div>
         <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 ">
-          <h1 className="z-10 text-black text-center text-8xl mb-0 pb-0">
+          <h1 className="z-10 text-black text-center text-8xl leading-0">
             {homeData.page_title}
           </h1>
-          <h3 className="z-10 text-black text-4xl mbtext-center ">
+          <h3 className="z-10 text-black text-4xl mb:text-center ">
             <Typewriter
               options={{
                 strings: `${typewriter_texts}`,
@@ -98,6 +103,7 @@ const Index = ({ homeData }: Props) => {
           </button>
         </Link>
       </section>
+      
 
       {/* facts in numbers section */}
       <section className="p-16 mx-16">
@@ -105,10 +111,19 @@ const Index = ({ homeData }: Props) => {
           {homeData.short_description}
         </h4>
         <div className="flex">
-          {homeData.facts_in_numbers.map((e) => (
-            <div className="flex grow flex-col bg-blue flex-1 p-8 m-8 items-center">
+          {homeData.facts_in_numbers.map((e, i) => (
+            <div key={i} className={`flex grow flex-col bg-blue flex-1 p-8 m-8 items-center ${i%2 == 0? "bg-blue" : "bg-navy text-white"}`}>
               <img src={e.icon} className="h-24 w-24 mb-4" />
-              <h1 className="text-7xl">{e.number}</h1>
+              <h1 className="text-7xl">
+              <AnimatedNumber
+          value={e.number}
+          duration={1500}
+          formatValue={(n) => n.toFixed(0)}
+          configs={(index) => {
+            return { mass: 1, tension: 230 * (index + 1), friction: 140 };
+          }}
+        />
+              </h1>
               <p className="text-center">{e.description}</p>
             </div>
           ))}
