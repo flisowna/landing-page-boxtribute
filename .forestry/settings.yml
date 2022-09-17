@@ -21,6 +21,13 @@ sections:
   templates:
   - home
 - type: directory
+  path: data/home/news
+  label: news snippets
+  create: all
+  match: "*"
+  templates:
+  - news-snippet
+- type: directory
   path: data/home/social
   label: social media snippets
   create: all
