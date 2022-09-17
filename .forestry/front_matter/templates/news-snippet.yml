@@ -1,4 +1,46 @@
 ---
 label: news snippet
 hide_body: true
-fields: []
+fields:
+- name: news_block
+  type: field_group_list
+  fields:
+  - name: image
+    type: file
+    config:
+      maxSize: 64
+    label: image
+  - name: image_description
+    type: text
+    config:
+      required: false
+    label: image description
+    description: for accessibility
+  - name: title
+    type: text
+    config:
+      required: false
+    label: title
+  - name: headline
+    type: text
+    config:
+      required: false
+      max: 150
+    label: headline
+    description: short description of the news
+  - name: text
+    type: textarea
+    default: ''
+    config:
+      required: false
+      wysiwyg: false
+      schema:
+        format: markdown
+      max: 300
+    label: text
+    description: longer description of the news
+  config:
+    min: 
+    max: 
+    labelField: 
+  label: news block
