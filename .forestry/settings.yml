@@ -22,14 +22,14 @@ sections:
   - home
 - type: directory
   path: data/home/news
-  label: news snippets
+  label: news
   create: all
   match: "*"
   templates:
   - news-snippet
 - type: directory
   path: data/home/social
-  label: social media snippets
+  label: 'social media '
   create: all
   match: "*"
   templates:
