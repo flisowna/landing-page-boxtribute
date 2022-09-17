@@ -5,13 +5,6 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: data/home/social
-  label: social media snippets
-  create: all
-  match: "*"
-  templates:
-  - social-media-snippet
-- type: directory
   path: data/aboutus
   label: about us section
   create: all
@@ -27,6 +20,13 @@ sections:
   match: "**/*"
   templates:
   - home
+- type: directory
+  path: data/home/social
+  label: social media snippets
+  create: all
+  match: "*"
+  templates:
+  - social-media-snippet
 - type: heading
   label: Our Impact
 - type: directory
