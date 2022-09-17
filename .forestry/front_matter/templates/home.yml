@@ -2,11 +2,11 @@
 label: home
 hide_body: true
 fields:
-- name: page_title
+- name: main_heading
   type: text
   config:
     required: false
-  label: page title
+  label: main heading
 - name: hero_image_description
   type: text
   config:
