@@ -1,5 +1,5 @@
 import Container from "../components/container";
-import Layout from "../components/layout";
+
 import { getDataBySlug } from "../lib/api";
 import Head from "next/head";
 import { CMS_NAME } from "../lib/constants";
@@ -10,7 +10,6 @@ import dynamic from "next/dynamic";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
 import AnimatedNumber from "react-animated-number";
-
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -74,14 +73,14 @@ const Index = ({ homeData }: Props) => {
       {/* hero section */}
       <section className="w-full h-auto  relative">
         <div className="">
-        <Image
-          src={homeData.hero_image}
-          alt={homeData.hero_image_description}
-          width={1600}
-          height={1000}
-          z-0
-          className="blur"
-        />
+          <Image
+            src={homeData.hero_image}
+            alt={homeData.hero_image_description}
+            width={1600}
+            height={1000}
+            z-0
+            className="blur"
+          />
         </div>
         <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 ">
           <h1 className="z-10 text-black text-center text-8xl leading-0">
@@ -103,7 +102,6 @@ const Index = ({ homeData }: Props) => {
           </button>
         </Link>
       </section>
-      
 
       {/* facts in numbers section */}
       <section className="p-16 mx-16">
@@ -112,17 +110,26 @@ const Index = ({ homeData }: Props) => {
         </h4>
         <div className="flex">
           {homeData.facts_in_numbers.map((e, i) => (
-            <div key={i} className={`flex grow flex-col bg-blue flex-1 p-8 m-8 items-center ${i%2 == 0? "bg-blue" : "bg-navy text-white"}`}>
+            <div
+              key={i}
+              className={`flex grow flex-col bg-blue flex-1 p-8 m-8 items-center ${
+                i % 2 == 0 ? "bg-blue" : "bg-navy text-white"
+              }`}
+            >
               <img src={e.icon} className="h-24 w-24 mb-4" />
               <h1 className="text-7xl">
-              <AnimatedNumber
-          value={e.number}
-          duration={1500}
-          formatValue={(n) => n.toFixed(0)}
-          configs={(index) => {
-            return { mass: 1, tension: 230 * (index + 1), friction: 140 };
-          }}
-        />
+                <AnimatedNumber
+                  value={e.number}
+                  duration={1500}
+                  formatValue={(n) => n.toFixed(0)}
+                  configs={(index) => {
+                    return {
+                      mass: 1,
+                      tension: 230 * (index + 1),
+                      friction: 140,
+                    };
+                  }}
+                />
               </h1>
               <p className="text-center">{e.description}</p>
             </div>
@@ -146,12 +153,12 @@ const Index = ({ homeData }: Props) => {
               </Link>
             </div>
             <div className="flex justify-center items-center overflow-hidden">
-                  <img
-                    className="shrink-0 min-h-full min-w-full"
-                    src={e.image}
-                    alt={e.image_description}
-                  />
-                </div>
+              <img
+                className="shrink-0 min-h-full min-w-full"
+                src={e.image}
+                alt={e.image_description}
+              />
+            </div>
           </div>
         ))}
       </section>

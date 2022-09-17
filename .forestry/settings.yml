@@ -5,6 +5,13 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
+  path: data/home/social
+  label: social media snippets
+  create: all
+  match: "*"
+  templates:
+  - social-media-snippet
+- type: directory
   path: data/aboutus
   label: about us section
   create: all
@@ -74,8 +81,8 @@ sections:
 - type: document
   path: _sections/hero-section.md
   label: Hero1
-upload_dir: /uploads
-public_path: /uploads
+upload_dir: uploads
+public_path: "/uploads"
 front_matter_path: ''
 use_front_matter_path: false
 file_template: ":filename:"

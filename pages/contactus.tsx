@@ -1,5 +1,5 @@
 import dynamic from "next/dynamic";
-import { MapSectionData } from "../components/sections/MapSection";
+import { MapSectionData } from "../components/MapSection";
 import { getDataBySlug } from "../lib/api";
 
 interface IParagraph {
