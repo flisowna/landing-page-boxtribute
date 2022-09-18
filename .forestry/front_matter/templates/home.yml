@@ -87,5 +87,10 @@ fields:
     max: 
     labelField: 
   label: facts in numbers
+- name: title_of_news_section
+  type: text
+  config:
+    required: false
+  label: title of news section
 pages:
 - data/home/home_data.md
