@@ -39,5 +39,15 @@ fields:
     schema:
       format: markdown
   label: text
+- name: button_text
+  type: text
+  config:
+    required: false
+  label: button text
+- name: button_image
+  type: file
+  config:
+    maxSize: 64
+  label: button image
 pages:
 - data/home/news/news-from-the-field-serbia.md
