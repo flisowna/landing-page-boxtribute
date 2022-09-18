@@ -2,37 +2,28 @@
 label: social media snippet
 hide_body: true
 fields:
-- name: social_media_block
-  type: field_group_list
-  fields:
-  - name: image
-    type: file
-    config:
-      maxSize: 64
-    label: image
-  - name: image_description
-    type: text
-    config:
-      required: false
-    label: image description
-    description: for accessibility
-  - name: title
-    type: text
-    config:
-      required: false
-    label: title
-  - name: text
-    type: textarea
-    default: ''
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-      max: 250
-    label: text
+- name: image
+  type: file
   config:
-    min: 
-    max: 
-    labelField: 
-  label: social media block
+    maxSize: 64
+  label: image
+- name: image_description
+  type: text
+  config:
+    required: false
+  label: image description
+- name: title
+  type: text
+  config:
+    required: false
+  label: title
+- name: text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+    max: 200
+  label: text
