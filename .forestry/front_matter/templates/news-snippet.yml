@@ -39,3 +39,5 @@ fields:
     schema:
       format: markdown
   label: text
+pages:
+- data/home/news/news-from-the-field-serbia.md
