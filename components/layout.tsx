@@ -1,6 +1,6 @@
 import Navbar from "./Navbar"
 import Footer, {Props} from "./Footer"
-import Meta from "../meta"
+import Meta from "./meta"
 import { getDataBySlug } from "../../lib/api";
 
 

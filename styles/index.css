@@ -37,3 +37,10 @@
     filter: blur(4px);
   -webkit-filter: blur(4px);
   }
+
+  .cta-button-hero-section-home {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%)
+  }

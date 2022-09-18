@@ -9,7 +9,10 @@ import React from "react";
 import dynamic from "next/dynamic";
 import Typewriter from "typewriter-effect";
 import Link from "next/link";
-import AnimatedNumber from "react-animated-number";
+import CTAButton from "../components/CTAButton";
+import TextBlock from "../components/TextBlock";
+import FactInNumber from "../components/FactInNumbers";
+import FactInNumbers from "../components/FactInNumbers";
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -96,43 +99,26 @@ const Index = ({ homeData }: Props) => {
             />
           </h3>
         </div>
-        <Link href={homeData.cta_link}>
-          <button className="bg-red absolute bottom-1/4 left-1/2 transform -translate-x-1/2 px-8 py-2 text-white text-2xl rounded-lg">
-            {homeData.cta_button}
-          </button>
-        </Link>
+        <div className="cta-button-hero-section-home">
+          <CTAButton
+            cta_button={homeData.cta_button}
+            cta_link={homeData.cta_link}
+          />
+        </div>
       </section>
 
       {/* facts in numbers section */}
       <section className="p-16 mx-16">
-        <h4 className="text-center text-5xl mb-16">
-          {homeData.short_description}
-        </h4>
+        <TextBlock>{homeData.short_description}</TextBlock>
         <div className="flex">
           {homeData.facts_in_numbers.map((e, i) => (
-            <div
+            <FactInNumbers
               key={i}
-              className={`flex grow flex-col bg-blue flex-1 p-8 m-8 items-center ${
-                i % 2 == 0 ? "bg-blue" : "bg-navy text-white"
-              }`}
-            >
-              <img src={e.icon} className="h-24 w-24 mb-4" />
-              <h1 className="text-7xl">
-                <AnimatedNumber
-                  value={e.number}
-                  duration={1500}
-                  formatValue={(n) => n.toFixed(0)}
-                  configs={(index) => {
-                    return {
-                      mass: 1,
-                      tension: 230 * (index + 1),
-                      friction: 140,
-                    };
-                  }}
-                />
-              </h1>
-              <p className="text-center">{e.description}</p>
-            </div>
+              icon={e.icon}
+              description={e.description}
+              number={e.number}
+              image_description={e.image_description}
+            />
           ))}
         </div>
       </section>
