@@ -17,7 +17,7 @@ sections:
   path: data/home
   label: home - main
   create: all
-  match: "**/*"
+  match: "*"
   templates:
   - home
 - type: directory
