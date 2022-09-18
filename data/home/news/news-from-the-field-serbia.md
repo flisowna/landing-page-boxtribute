@@ -8,5 +8,7 @@ text: Sea-Eye is a civil rescue NGO working in the Mediterranean Sea and has bee
   active since 2015. With the rescue organisation, Sophie assisted people on the move
   as a Rhib communicator, which essentially means she was the first point of contact
   with the boat in distress, helping to calm and control the situation.
+button_text: Next
+button_image: "/uploads/arrow.svg"
 
 ---
