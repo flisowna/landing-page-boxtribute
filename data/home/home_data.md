@@ -73,5 +73,7 @@ more_info:
 cta_link: "/aboutus"
 main_heading: Boxtribute
 title_of_news_section: News
+text_news_button: Next
+image_news_button: "/uploads/arrow.svg"
 
 ---
