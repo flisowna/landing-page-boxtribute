@@ -13,6 +13,7 @@ import CTAButton from "../components/CTAButton";
 import TextBlock from "../components/TextBlock";
 import FactInNumber from "../components/FactInNumbers";
 import FactInNumbers from "../components/FactInNumbers";
+import NewsSnippetImageLeft from "../components/NewsSnippet";
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -33,6 +34,8 @@ interface INews {
   text: string;
   link: string;
   image_description: string;
+  button_image: string;
+  button_text: string;
 }
 
 interface IInfo {
@@ -126,6 +129,8 @@ const Index = ({ homeData }: Props) => {
       {/* news section */}
       <section>
         {homeData.news_list.map((e) => (
+          <>
+          {/* <NewsSnippetImageLeft title={e.title} image={e.image} image_description={e.image_description} headline={e.headline} link={e.link} button_image={}/> */}
           <div className="flex bg-gray ">
             <div className="flex flex-col mx-32 my-16">
               <h1 className="text-6xl font-bold uppercase">{e.title}</h1>
@@ -146,6 +151,7 @@ const Index = ({ homeData }: Props) => {
               />
             </div>
           </div>
+          </>
         ))}
       </section>
       {/* more info section */}
