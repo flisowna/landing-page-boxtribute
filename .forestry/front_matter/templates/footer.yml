@@ -35,5 +35,3 @@ fields:
   config:
     required: false
   label: boxtribute trademark
-pages:
-- data/footer/footer_data.md
