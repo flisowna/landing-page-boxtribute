@@ -72,16 +72,6 @@ sections:
   match: "**/*"
   templates:
   - contact-us
-- type: heading
-  label: FOOTER
-- type: directory
-  path: data/footer
-  label: Footer
-  create: all
-  match: "**/*"
-- type: document
-  path: _sections/footer/footer.md
-  label: 'footer '
 - type: document
   path: _sections/aboutus/team-member.md
   label: team-member
