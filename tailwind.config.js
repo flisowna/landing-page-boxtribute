@@ -10,6 +10,12 @@ module.exports = {
         success: '#0070f3',
         cyan: '#79FFE1',
       },
+      screens: {
+        sm: '480px',
+        md: '768px',
+        lg: '976px',
+        xl: '1440px',
+      },
       spacing: {
         28: '7rem',
       },
@@ -20,6 +26,8 @@ module.exports = {
         tight: 1.2,
       },
       fontSize: {
+        'md':'1rem',
+        'xl': '1.25',
         '2xl': '1.5rem',
         '5xl': '2.5rem',
         '6xl': '2.75rem',

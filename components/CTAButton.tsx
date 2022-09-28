@@ -8,7 +8,7 @@ type Props = {
 const CTAButton = ({ cta_link, cta_button }: Props) => {
   return (
     <Link href={cta_link}>
-      <button className="bg-red px-8 py-2 text-white text-2xl rounded-lg">
+      <button className="bg-red px-4 md:px-8 py-1 md:py-2 text-white text-xl md:text-2xl rounded-sm md:rounded-lg">
         {cta_button}
       </button>
     </Link>

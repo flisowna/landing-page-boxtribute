@@ -14,6 +14,8 @@ import TextBlock from "../components/TextBlock";
 import FactInNumber from "../components/FactInNumbers";
 import FactInNumbers from "../components/FactInNumbers";
 import NewsSnippetImageLeft from "../components/NewsSnippet";
+import ImageLeftText5050 from "../components/ImageLeftText5050";
+import FactInNumbersContainer from "../components/FactInNumbersContainer";
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -27,15 +29,13 @@ interface IFactCell {
   image_description: string;
 }
 
-interface INews {
+interface IBlogPostData {
   image: string;
+  image_description: string;
   title: string;
   headline: string;
   text: string;
-  link: string;
-  image_description: string;
-  button_image: string;
-  button_text: string;
+  content: string;
 }
 
 interface IInfo {
@@ -55,7 +55,6 @@ interface IHomeData {
   cta_link: string;
   short_description: string;
   facts_in_numbers: IFactCell[];
-  news_list: INews[];
   more_info: IInfo[];
 }
 
@@ -64,6 +63,7 @@ type Props = {
 };
 
 const Index = ({ homeData }: Props) => {
+  const array = [];
   const typewriter_texts = homeData.subtitles_hero.map(
     (e) => e.text_for_typing
   );
@@ -73,12 +73,11 @@ const Index = ({ homeData }: Props) => {
       {/* <Layout> */}
       <Head>
         <title>Boxtribute</title>
-        <script src="js/leaflet-providers.js"></script>
       </Head>
 
       {/* hero section */}
-      <section className="w-full h-auto  relative">
-        <div className="">
+      <section className="w-full h-auto relative">
+        <div>
           <Image
             src={homeData.hero_image}
             alt={homeData.hero_image_description}
@@ -88,19 +87,19 @@ const Index = ({ homeData }: Props) => {
             className="blur"
           />
         </div>
-        <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 ">
-          <h1 className="z-10 text-black text-center text-8xl leading-0">
+        <div className="absolute top-1/4 leading-none mb-4 left-1/2 transform -translate-x-1/2 ">
+          <h1 className="z-10 text-black text-center leading-0">
             {homeData.page_title}
           </h1>
-          <h3 className="z-10 text-black text-4xl mb:text-center ">
+          <h2 className="z-10 text-black mx-0 md:text-6xl ">
             <Typewriter
               options={{
-                strings: `${typewriter_texts}`,
+                strings: [`${typewriter_texts}`],
                 autoStart: true,
                 loop: true,
               }}
             />
-          </h3>
+          </h2>
         </div>
         <div className="cta-button-hero-section-home">
           <CTAButton
@@ -111,46 +110,36 @@ const Index = ({ homeData }: Props) => {
       </section>
 
       {/* facts in numbers section */}
-      <section className="p-16 mx-16">
+      <section className="md:p-16 md:mx-16">
         <TextBlock>{homeData.short_description}</TextBlock>
-        <div className="flex">
-          {homeData.facts_in_numbers.map((e, i) => (
-            <FactInNumbers
-              key={i}
-              icon={e.icon}
-              description={e.description}
-              number={e.number}
-              image_description={e.image_description}
-            />
-          ))}
-        </div>
+        <FactInNumbersContainer factInNumbers={homeData.facts_in_numbers} />
       </section>
 
       {/* news section */}
       <section>
         {homeData.news_list.map((e) => (
           <>
-          {/* <NewsSnippetImageLeft title={e.title} image={e.image} image_description={e.image_description} headline={e.headline} link={e.link} button_image={}/> */}
-          <div className="flex bg-gray ">
-            <div className="flex flex-col mx-32 my-16">
-              <h1 className="text-6xl font-bold uppercase">{e.title}</h1>
-              <h3 className="text-2xl mb-6">{e.headline}</h3>
-              <p>{e.text}</p>
-              <Link href={e.link}>
-                <a className="flex text-red text-5xl mt-8 ">
-                  <h3 className="mr-16">Next</h3>
-                  <img src="/uploads/arrow.svg" />
-                </a>
-              </Link>
+            {/* <NewsSnippetImageLeft title={e.title} image={e.image} image_description={e.image_description} headline={e.headline} link={e.link} button_image={}/> */}
+            <div className="flex bg-gray ">
+              <div className="flex flex-col mx-32 my-16">
+                <h1 className="text-6xl font-bold uppercase">{e.title}</h1>
+                <h3 className="text-2xl mb-6">{e.headline}</h3>
+                <p>{e.text}</p>
+                <Link href={e.link}>
+                  <a className="flex text-red text-5xl mt-8 ">
+                    <h3 className="mr-16">Next</h3>
+                    <img src="/uploads/arrow.svg" />
+                  </a>
+                </Link>
+              </div>
+              <div className="flex justify-center items-center overflow-hidden">
+                <img
+                  className="shrink-0 min-h-full min-w-full"
+                  src={e.image}
+                  alt={e.image_description}
+                />
+              </div>
             </div>
-            <div className="flex justify-center items-center overflow-hidden">
-              <img
-                className="shrink-0 min-h-full min-w-full"
-                src={e.image}
-                alt={e.image_description}
-              />
-            </div>
-          </div>
           </>
         ))}
       </section>
@@ -176,6 +165,19 @@ const Index = ({ homeData }: Props) => {
           ))}
         </div>
       </section>
+      <ImageLeftText5050
+        bg_color="gray"
+        image={homeData.hero_image}
+        image_description={homeData.hero_image_description}
+      >
+        <h1>Title</h1>
+        <p>
+          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
+          nemo quidem vitae qui labore veritatis, vero obcaecati rem possimus!
+          Deleniti eligendi voluptate sint commodi accusamus quia reprehenderit
+          obcaecati dolores praesentium.
+        </p>
+      </ImageLeftText5050>
 
       {/* </Layout> */}
     </>
@@ -193,10 +195,9 @@ export const getStaticProps = async () => {
   //   'coverImage',
   // ])
 
-  const footerData = getDataBySlug("footer/footer_data");
   const homeData = getDataBySlug("home/home_data");
 
   return {
-    props: { footerData, homeData },
+    props: { homeData },
   };
 };

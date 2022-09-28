@@ -4,13 +4,13 @@ type Props = {
   children?: ReactNode
 }
 
-const PostTitle = ({ children }: Props) => {
+const TextBlock = ({ children }: Props) => {
   return (
-    <h3 className="text-center text-5xl m-16 ">
+    <h3 className=" text-center my-6 mx-4 md:text-5xl md:m-16 ">
       {children}
     </h3>
     
   )
 }
 
-export default PostTitle
+export default TextBlock

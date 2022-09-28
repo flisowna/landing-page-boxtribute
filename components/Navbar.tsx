@@ -1,7 +1,9 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
+import HamburgerMenu  from "./HamburgerMenu";
+import { useMediaQuery } from "./mediaQuery";
 
-const navLinks = [
+export const navLinks = [
   { name: "Home", path: "/" },
   {
     name: "About Us",
@@ -19,29 +21,33 @@ const navLinks = [
 
 export const Navbar = () => {
   const router = useRouter();
+  const isBreakpoint = useMediaQuery(768);
   return (
-    <div className="flex justify-between my-4 mx-8 z-10">
+    <nav className="flex justify-between my-4 mx-8 z-10">
       <Link href="/">
         <a className="flex items-center">
-          <img className="h-14" src="/boxtribute-logo.png"></img>
-          <h1 className="uppercase font-semibold">boxtribute</h1>
+          <img className="h-14" src="/boxtribute-logo.png" alt="boxtribute logo"/>
+          <h3 className="uppercase text-xl md:text-2xl font-semibold">boxtribute</h3>
         </a>
       </Link>
-
-      <ul className="flex justify-end items-center">
-        {navLinks.map((link, i) => (
-          <li key={i}>
-            <Link href={link.path}>
-              {router.pathname === link.path ? (
-                <a className="font-bold p-2">{link.name}</a>
-              ) : (
-                <a className="p-2">{link.name}</a>
-              )}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+      {isBreakpoint ? (
+        <HamburgerMenu />
+      ) : (
+        <ul className="flex justify-end items-center">
+          {navLinks.map((link, i) => (
+            <li key={i}>
+              <Link href={link.path}>
+                {router.pathname === link.path ? (
+                  <a className="font-bold p-2">{link.name}</a>
+                ) : (
+                  <a className="p-2">{link.name}</a>
+                )}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
+    </nav>
   );
 };
 

@@ -1,24 +1,18 @@
-import Navbar from "./Navbar"
-import Footer, {Props} from "./Footer"
-import Meta from "./meta"
-import { getDataBySlug } from "../../lib/api";
+import Navbar from "./Navbar";
+import Footer from "./Footer";
+import Meta from "./meta";
 
-
-export default function Layout({ children}) {
-  return (
-    <div>
-    <Meta />
-      <Navbar />
-      <main>{children}</main>
-      {/* <Footer footerData={footerData}/> */}
-    </div>
-  )
+interface Props {
+  children: React.ReactNode;
 }
 
-// export const getStaticProps = async () => {
-//   const footerData = getDataBySlug("footer/footer_data");
-
-//   return {
-//     props: { footerData },
-//   };
-// };
+export default function Layout({ children }: Props) {
+  return (
+    <div>
+      <Meta />
+      <Navbar />
+      <main>{children}</main>
+      <Footer />
+    </div>
+  );
+}
