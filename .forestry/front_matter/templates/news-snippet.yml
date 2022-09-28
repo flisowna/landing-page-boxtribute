@@ -30,7 +30,7 @@ fields:
     max: 160
   label: headline
   description: short description of the news
-- name: text
+- name: short_text
   type: textarea
   default: ''
   config:
@@ -38,6 +38,15 @@ fields:
     wysiwyg: false
     schema:
       format: markdown
-  label: text
+  label: short text
+- name: blog_text
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: false
+    schema:
+      format: markdown
+  label: blog text
 pages:
 - data/home/news/news-from-the-field-serbia.md
