@@ -3,13 +3,15 @@ import ErrorPage from 'next/error'
 import Container from '../../components/container'
 import NewsBody from '../../components/NewsBody'
 import PostHeader from '../../components/post-header'
-import Layout from '../../components/layout'
+import Layout from '../../components/Layout'
 import { getPostBySlug, getAllPosts } from '../../lib/api'
 // import PostTitle from '../../components/post-title'
 import Head from 'next/head'
 import { CMS_NAME } from '../../lib/constants'
 import markdownToHtml from '../../lib/markdownToHtml'
 import type PostType from '../../interfaces/post'
+
+
 
 type Props = {
   post: PostType

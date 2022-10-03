@@ -16,6 +16,7 @@ import FactInNumbers from "../components/FactInNumbers";
 import NewsSnippetImageLeft from "../components/NewsSnippet";
 import ImageLeftText5050 from "../components/ImageLeftText5050";
 import FactInNumbersContainer from "../components/FactInNumbersContainer";
+import SocialMediaSnippet from "../components/SocialMediaSnippet";
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -165,6 +166,7 @@ const Index = ({ homeData }: Props) => {
           ))}
         </div>
       </section>
+      <SocialMediaSnippet socialMediaData={homeData.more_info} />
       <ImageLeftText5050
         bg_color="gray"
         image={homeData.hero_image}
