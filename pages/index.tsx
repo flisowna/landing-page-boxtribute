@@ -113,7 +113,7 @@ const Index = ({ homeData }: Props) => {
 
       {/* facts in numbers section */}
       <section className="md:p-16 md:mx-16">
-        <TextBlock>{homeData.short_description}</TextBlock>
+        <TextBlock text_justify="center">{homeData.short_description}</TextBlock>
         <FactInNumbersContainer factInNumbers={homeData.facts_in_numbers} />
       </section>
 

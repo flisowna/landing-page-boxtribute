@@ -24,7 +24,7 @@ const ImageLeftText5050 = ({
           alt={image_description}
         />
       </div>
-      <div className="w-full p-4 md:w-1/2 lg:px-20 lg:py-16">{children}</div>
+      <div className="w-full px-4 md:w-1/2 lg:px-20 lg:py-0 py-12">{children}</div>
     </div>
   );
 };

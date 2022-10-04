@@ -1,9 +1,10 @@
 import { getDataBySlug } from "../lib/api";
 import Image from "next/image";
-import 'react-alice-carousel/lib/alice-carousel.css';
-import AliceCarousel from 'react-alice-carousel';
+import "react-alice-carousel/lib/alice-carousel.css";
+import AliceCarousel from "react-alice-carousel";
 import SectionTitle from "../components/SectionTitle";
-
+import ImageLeftText5050 from "../components/ImageLeftText5050";
+import TextBlock from "../components/TextBlock";
 
 type ITextAndImage = {
   image: string;
@@ -31,13 +32,16 @@ export interface ITeamMember {
 export interface IAboutUsData {
   title_of_the_page: string;
   hero_images_with_description: IHeroImage[];
-  paragraphs_group_intro: IParagraph[];
+  title_of_the_story: string;
   text_with_picture_for_the_story: ITextAndImage[];
   full_width_picture: string;
+  full_width_image_description: string;
   text_block_1: string;
   text_block_2: string;
   text_block_3: string;
   text_legal: string;
+  title_for_the_team_section: string;
+  text_for_team_section: string;
   team_member: ITeamMember[];
 }
 
@@ -46,86 +50,118 @@ type Props = {
 };
 
 export const AboutUs = ({ aboutUsData }: Props) => {
-
   const handleDragStart = (e: any) => e.preventDefault();
 
-  const carouselItems = aboutUsData.hero_images_with_description.map(e => 
-    <img src={e.image} alt={e.description} onDragStart={handleDragStart} role="presentation" />,
-    )
+  const carouselItems = aboutUsData.hero_images_with_description.map((e) => (
+    <img
+      src={e.image}
+      alt={e.description}
+      onDragStart={handleDragStart}
+      role="presentation"
+    />
+  ));
 
   return (
     <>
       {/* hero section */}
       <section>
-        <h1 className="text-8xl text-center">
-          {aboutUsData.title_of_the_page}
-        </h1>
+        <h1 className="text-center">{aboutUsData.title_of_the_page}</h1>
         <div className="flex justify-center items-center ml-10">
-        <AliceCarousel mouseTracking items={carouselItems} />
+          <AliceCarousel mouseTracking items={carouselItems} />
         </div>
       </section>
       {/* our story section */}
       <section>
-        {/* <div className="mx-32 my-16"> */}
-          <SectionTitle title={aboutUsData.title_section_1}/>
-
-          {aboutUsData.paragraphs_group_intro.map((p, i) => (
-            <p key={i} className="text-2xl my-4">
-              {p.paragraph}
-            </p>
-          ))}
-        {/* </div> */}
-        {aboutUsData.text_with_image_for_the_story.map((e, i) =>
-          i % 2 == 0 ? (
-            <div key={i} className="flex py-16 px-32 justify-between">
-              <div className="flex flex-1 flex-col">
-                {e.paragraph_s_group.map((p) => (
-                  <p className="text-2xl my-4">{p.paragraph}</p>
-                ))}
-              </div>
-              <div className="flex-2 ml-16">
-                <Image
-                  src={e.image}
-                  alt={e.description}
-                  width={400}
-                  height={400}
-                />
-              </div>
-            </div>
-          ) : (
-            <div key={i} className="flex py-16 px-32 justify-between bg-gray">
-              <div className="flex-2 mr-16">
-                <Image
-                  src={e.image}
-                  alt={e.description}
-                  width={400}
-                  height={400}
-                />
-              </div>
-              <div className="flex flex-1 flex-col ">
-                {e.paragraph_s_group.map((p) => (
-                  <p className="text-2xl my-4">{p.paragraph}</p>
-                ))}
-              </div>
-            </div>
-          )
-        )}
+        <div className="md:px-32 bg-blue">
+          <SectionTitle title={aboutUsData.title_of_the_story} />
+          <div className="md:py-16">
+            <ImageLeftText5050
+              bg_color="blue"
+              image={aboutUsData.text_with_picture_for_the_story[0].image}
+              image_description={
+                aboutUsData.text_with_picture_for_the_story[0]
+                  .description_for_the_image
+              }
+            >
+              {aboutUsData.text_with_picture_for_the_story[0].paragraph_s_group.map(
+                (e, i) => (
+                  <p className="lg:pb-6 pb-4" key={i}>
+                    {e.paragraph}
+                  </p>
+                )
+              )}
+            </ImageLeftText5050>
+          </div>
+        </div>
+        <TextBlock text_justify="left">{aboutUsData.text_block_1}</TextBlock>
+        <Image
+          src={aboutUsData.full_width_picture}
+          alt={aboutUsData.full_width_image_description}
+          width={1440}
+          height={996}
+        />
+        <div className="py-12 px-12 md:py-16 md:px-32">
+          <ImageLeftText5050
+            bg_color="white"
+            image={aboutUsData.text_with_picture_for_the_story[1].image}
+            image_description={
+              aboutUsData.text_with_picture_for_the_story[1]
+                .description_for_the_image
+            }
+          >
+            {aboutUsData.text_with_picture_for_the_story[1].paragraph_s_group.map(
+              (e, i) => (
+                <p className="lg:pb-6 pb-4" key={i}>
+                  {e.paragraph}
+                </p>
+              )
+            )}
+          </ImageLeftText5050>
+        </div>
+        <TextBlock text_justify="left" bg_color="navy" text_color="white">
+          {aboutUsData.text_block_2}
+        </TextBlock>
+        <div className="py-12 px-12 md:py-16 md:px-32">
+          <ImageLeftText5050
+            bg_color="white"
+            image={aboutUsData.text_with_picture_for_the_story[2].image}
+            image_description={
+              aboutUsData.text_with_picture_for_the_story[2]
+                .description_for_the_image
+            }
+          >
+            {aboutUsData.text_with_picture_for_the_story[2].paragraph_s_group.map(
+              (e, i) => (
+                <p className="lg:pb-6 pb-4" key={i}>
+                  {e.paragraph}
+                </p>
+              )
+            )}
+          </ImageLeftText5050>
+        </div>
       </section>
-      <section className="bg-blue py-16 text-2xl">
-        <h3 className="text-center mx-48">{aboutUsData.text_legal}</h3>
-      </section>
+      <TextBlock text_justify="center" bg_color="blue">
+        {aboutUsData.text_legal}
+      </TextBlock>
       {/* team section */}
       <section>
-        <h2 className="mx-32 text-4xl p-8">{aboutUsData.title_section_2}</h2>
+        <h2 className="mx-32 text-4xl p-8 text-center">
+          {aboutUsData.title_for_the_team_section}
+        </h2>
+        <p className="p-4">{aboutUsData.text_for_team_section}</p>
         <div className="flex flex-wrap justify-center mx-8">
           {aboutUsData.team_member.map((e, i) => (
-            <div key={i} className="m-4">
+            <div key={i} className="m-4 w-2/5 lg:w-auto">
               <Image
                 src={e.image}
                 alt={e.description}
                 width={350}
                 height={350}
               />
+              <div className="text-center">
+                <h3>{e.name}</h3>
+                <h3>{e.role}</h3>
+              </div>
             </div>
           ))}
         </div>
