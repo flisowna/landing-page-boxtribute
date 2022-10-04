@@ -48,7 +48,7 @@ text_legal: 'Since december 2019, we are a registered Dutch foundation under the
   name Stichting Boxwise (KVK number: 76346536 | RSIN: 860596527).'
 title_section_2: Meet the Team
 team_member:
-- surname: Gemütliche
+- surname: Gemütliche1
   role: Python freak
   image: "/uploads/philipp.png"
   description: "\n\nLorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris
