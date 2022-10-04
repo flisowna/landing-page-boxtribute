@@ -8,7 +8,7 @@ import SectionTitle from "../components/SectionTitle";
 type ITextAndImage = {
   image: string;
   paragraph_s_group: IParagraph[];
-  description: string;
+  description_for_the_image: string;
 };
 
 export type IHeroImage = {
@@ -31,11 +31,13 @@ export interface ITeamMember {
 export interface IAboutUsData {
   title_of_the_page: string;
   hero_images_with_description: IHeroImage[];
-  title_section_1: string;
   paragraphs_group_intro: IParagraph[];
-  text_with_image_for_the_story: ITextAndImage[];
+  text_with_picture_for_the_story: ITextAndImage[];
+  full_width_picture: string;
+  text_block_1: string;
+  text_block_2: string;
+  text_block_3: string;
   text_legal: string;
-  title_section_2: string;
   team_member: ITeamMember[];
 }
 
