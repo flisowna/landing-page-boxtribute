@@ -48,15 +48,15 @@ fields:
     max: 
     labelField: 
   label: paragraph's group for the intro
-- name: text_with_picture_for_the_story_1
+- name: text_with_picture_for_the_story
   type: field_group_list
   fields:
-  - name: picture
+  - name: image
     type: file
     config:
       maxSize: 64
-    label: picture
-    description: picture for the story
+    description: image for the story
+    label: image
   - name: description_for_the_image
     type: text
     config:
@@ -85,7 +85,7 @@ fields:
     min: 
     max: 
     labelField: 
-  label: text with picture for the story 1
+  label: text with picture for the story
 - name: 1_text_block
   type: textarea
   default: ''
@@ -100,6 +100,24 @@ fields:
   config:
     maxSize: 64
   label: full width picture
+- name: 2_text_block
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: 2 text block
+- name: 3_text_block
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: 3 text block
 - name: text_legal
   type: textarea
   default: ''
@@ -114,6 +132,15 @@ fields:
   config:
     required: false
   label: title for the team section
+- name: text_for_team_section
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: text for team section
 - name: team_member
   type: field_group_list
   fields:
