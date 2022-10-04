@@ -131,5 +131,17 @@ text_for_team_section: "We are a diverse team of people from around the world br
   other associations through our application but also to refocus our humanitarian
   action on re-dignifying the beneficiaries. In 2019 Boxtribute was registered as
   a Dutch foundation under the legal name Stichting Boxwise."
+full_width_picture: "/uploads/freeshop.png"
+1_text_block: We volunteered with a Norwegian NGO to distribute donations such as
+  clothes, hygiene products and food to refugees. The lack of adapted tools and the
+  chaotic situation in the field led us to rethink the logistics of humanitarian associations.
+text_with_picture_for_the_story:
+- image: "/uploads/children_in_camp.png"
+  description_for_the_image: children in a refugee camp
+  paragraph_s_group:
+  - paragraph: 'Nowadays we cooperate with more than 15 associations in Europe and
+      in the Middle East. '
+  - paragraph: "Our partners are engaged to support refugees and vulnerable population,
+      by providing them clothes, healthcare, hygiene good, electronics etc. \n"
 
 ---
