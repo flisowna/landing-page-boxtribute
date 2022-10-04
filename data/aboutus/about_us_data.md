@@ -125,5 +125,11 @@ text_for_team_section: "We are a diverse team of people from around the world br
 3_text_block: Our team of former field coordinators, our experience as a foundation,
   and our regular collaboration with partner on the ground has shown us the shortcom-ings
   of the humanitarian system, and pushed us to rethink our commitment.
+2_text_block: "Coordinators gave out virtual currency and tracked what was bought
+  with it. The shop changed how volunteers and refugees interacted - it became a place
+  where everyone liked to go.   \n   \nThis great success has encouraged us to support
+  other associations through our application but also to refocus our humanitarian
+  action on re-dignifying the beneficiaries. In 2019 Boxtribute was registered as
+  a Dutch foundation under the legal name Stichting Boxwise."
 
 ---
