@@ -119,9 +119,9 @@ text_for_team_section: "We are a diverse team of people from around the world br
   together by a belief that we can and should use our skills to make a positive impact
   in the world. Boxtribute combines knowledge we’ve honed for years in the startup,
   technology, and logistics sectors with our experiences of what is needed on the
-  ground. It’s a solution we are proud to stand behind.   \n  \nAt Boxtribute, we
-  ensure that our volunteers always have time to develop skills and explore new interests,
-  as well as making sure everybody gets enough time off to relax!"
+  ground. It’s a solution we are proud to stand behind.   \n  \nAt **Boxtribute**,
+  we ensure that our volunteers always have time to develop skills and explore new
+  interests, as well as making sure everybody gets enough time off to relax!"
 3_text_block: Our team of former field coordinators, our experience as a foundation,
   and our regular collaboration with partner on the ground has shown us the shortcom-ings
   of the humanitarian system, and pushed us to rethink our commitment.
