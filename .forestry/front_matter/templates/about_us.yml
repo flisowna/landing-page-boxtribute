@@ -31,23 +31,6 @@ fields:
   config:
     required: false
   label: title of the story section
-- name: paragraph_s_group_intro
-  type: field_group_list
-  fields:
-  - name: paragraph_for_the_intro
-    type: textarea
-    default: ''
-    config:
-      required: false
-      wysiwyg: false
-      schema:
-        format: markdown
-    label: paragraph for the intro
-  config:
-    min: 
-    max: 
-    labelField: 
-  label: paragraph's group for the intro
 - name: text_with_picture_for_the_story
   type: field_group_list
   fields:
