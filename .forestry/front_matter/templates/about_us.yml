@@ -48,7 +48,7 @@ fields:
     max: 
     labelField: 
   label: paragraph's group for the intro
-- name: text_with_picture_for_the_story
+- name: text_with_picture_for_the_story_1
   type: field_group_list
   fields:
   - name: picture
@@ -57,6 +57,12 @@ fields:
       maxSize: 64
     label: picture
     description: picture for the story
+  - name: description_for_the_image
+    type: text
+    config:
+      required: false
+    label: description of the image
+    description: description of the image for accessibility
   - name: paragraph_s_group
     type: field_group_list
     fields:
@@ -75,17 +81,25 @@ fields:
       max: 
       labelField: 
     label: paragraph's group
-  - name: description_for_the_image
-    type: text
-    config:
-      required: false
-    label: description of the image
-    description: description of the image for accessibility
   config:
     min: 
     max: 
     labelField: 
-  label: text with picture for the story
+  label: text with picture for the story 1
+- name: 1_text_block
+  type: textarea
+  default: ''
+  config:
+    required: false
+    wysiwyg: true
+    schema:
+      format: markdown
+  label: 1 text block
+- name: full_width_picture
+  type: file
+  config:
+    maxSize: 64
+  label: full width picture
 - name: text_legal
   type: textarea
   default: ''
