@@ -109,42 +109,11 @@ team_member:
     ipsum. Integer in porttitor nunc. Praesent placerat enim sit amet justo hendrerit,
     gravida consequat risus elementum. "
 title_of_the_story: Our Story
-text_with_picture_for_the_story:
-- image: "/uploads/shoes_close_up.png"
-  description_for_the_image: shoes in a warehouse
-  paragraph_s_group:
-  - paragraph: We founded Boxtribute to solve the problems we saw as volunteers and
-      aid workers in the field.
-  - paragraph: Our story begins in autumn 2016, at the height of the European refugee
-      crisis, in a camp in Northern Greece.
-- image: "/uploads/qrscanning.png"
-  description_for_the_image: scanning a qr code on a box
-  paragraph_s_group:
-  - paragraph: Boxtribute was born. The web-app is designed to facilitate the distribution
-      of essential goods in the field. A free shop was opened where all beneficia-ries
-      could have the same fair choice. Volunteers knew what items were available and
-      where.
-- image: "/uploads/children_in_camp.png"
-  description_for_the_image: children in a refugee camp
-  paragraph_s_group:
-  - paragraph: 'Nowadays we cooperate with more than 15 associations in Europe and
-      in the Middle East. '
-  - paragraph: Our partners are engaged to support refugees and vulnerable population,
-      by providing them clothes, healthcare, hygiene good, electronics etc.
-1_text_block: We volunteered with a Norwegian NGO to distribute donations such as
-  clothes, hygiene products and **food to refugees**. The lack of adapted tools and
-  the chaotic situation in the field led us to rethink the logistics of humanitarian
-  associations.
-full_width_picture: "/uploads/freeshop.png"
-2_text_block: "Coordinators gave out virtual currency and tracked what was bought
-  with it. The shop changed how volunteers and refugees interacted - it became a place
-  where everyone liked to go.   \n   \nThis great success has encouraged us to support
-  other associations through our application but also to refocus our humanitarian
-  action on re-dignifying the beneficiaries. In 2019 Boxtribute was registered as
-  a Dutch foundation under the legal name Stichting Boxwise."
-3_text_block: Our team of former field coordinators, our experience as a foundation,
-  and our regular collaboration with partner on the ground has shown us the shortcom-ings
-  of the humanitarian system, and pushed us to rethink our commitment.
+paragraph_s_group_intro:
+- paragraph_for_the_intro: We founded Boxtribute to solve the problems we saw as volunteers
+    and aid workers in the field.
+- paragraph_for_the_intro: Our story begins in autumn 2016, at the height of the European
+    refugee crisis, in a camp in Northern Greece.
 title_for_the_team_section: Meet the Team
 text_for_team_section: "We are a diverse team of people from around the world brought
   together by a belief that we can and should use our skills to make a positive impact
