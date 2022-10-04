@@ -136,6 +136,13 @@ full_width_picture: "/uploads/freeshop.png"
   clothes, hygiene products and food to refugees. The lack of adapted tools and the
   chaotic situation in the field led us to rethink the logistics of humanitarian associations.
 text_with_picture_for_the_story:
+- image: "/uploads/qrscanning.png"
+  description_for_the_image: scanning qr code on a box
+  paragraph_s_group:
+  - paragraph: Boxtribute was born. The web-app is designed to facilitate the distribution
+      of essential goods in the field. A free shop was opened where all beneficia-ries
+      could have the same fair choice. Volunteers knew what items were available and
+      where.
 - image: "/uploads/children_in_camp.png"
   description_for_the_image: children in a refugee camp
   paragraph_s_group:
