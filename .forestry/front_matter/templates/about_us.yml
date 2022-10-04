@@ -167,5 +167,3 @@ fields:
     max: 
     labelField: 
   label: team member
-pages:
-- data/aboutus/about_us_data.md
