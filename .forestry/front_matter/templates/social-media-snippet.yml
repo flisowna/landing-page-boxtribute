@@ -29,4 +29,6 @@ fields:
   label: text
 pages:
 - data/home/social/did-you-know.md
+- data/home/social/did-you-know.md
+- data/home/social/march-hackathon.md
 - data/home/social/march-hackathon.md

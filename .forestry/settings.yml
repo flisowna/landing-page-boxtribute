@@ -8,6 +8,7 @@ sections:
   path: ''
   label: Home
   create: all
+  match: "**/*"
   templates:
   - our-mission
 - type: directory
