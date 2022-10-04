@@ -36,7 +36,7 @@ sections:
   label: Our Mission
 - type: directory
   path: data/ourmission
-  label: out mission
+  label: our mission
   create: all
   match: "*"
   templates:
