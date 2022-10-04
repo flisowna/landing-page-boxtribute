@@ -16,7 +16,8 @@ import FactInNumbers from "../components/FactInNumbers";
 import NewsSnippetImageLeft from "../components/NewsSnippet";
 import ImageLeftText5050 from "../components/ImageLeftText5050";
 import FactInNumbersContainer from "../components/FactInNumbersContainer";
-import SocialMediaSnippet from "../components/SocialMediaSnippet";
+  import SocialMediaSnippet from "../components/SocialMediaSnippet";
+import SectionTitle from "../components/SectionTitle";
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -118,6 +119,7 @@ const Index = ({ homeData }: Props) => {
 
       {/* news section */}
       <section>
+        <SectionTitle title="News" />
         {homeData.news_list.map((e) => (
           <>
             {/* <NewsSnippetImageLeft title={e.title} image={e.image} image_description={e.image_description} headline={e.headline} link={e.link} button_image={}/> */}

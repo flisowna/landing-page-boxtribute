@@ -2,6 +2,7 @@ import { getDataBySlug } from "../lib/api";
 import Image from "next/image";
 import 'react-alice-carousel/lib/alice-carousel.css';
 import AliceCarousel from 'react-alice-carousel';
+import SectionTitle from "../components/SectionTitle";
 
 
 type ITextAndImage = {
@@ -57,21 +58,21 @@ export const AboutUs = ({ aboutUsData }: Props) => {
         <h1 className="text-8xl text-center">
           {aboutUsData.title_of_the_page}
         </h1>
-        <div className="flex justify-center">
+        <div className="flex justify-center items-center ml-10">
         <AliceCarousel mouseTracking items={carouselItems} />
         </div>
       </section>
       {/* our story section */}
       <section>
-        <div className="mx-32 my-16">
-          <h2 className="text-4xl my-8">{aboutUsData.title_section_1}</h2>
+        {/* <div className="mx-32 my-16"> */}
+          <SectionTitle title={aboutUsData.title_section_1}/>
 
           {aboutUsData.paragraphs_group_intro.map((p, i) => (
             <p key={i} className="text-2xl my-4">
               {p.paragraph}
             </p>
           ))}
-        </div>
+        {/* </div> */}
         {aboutUsData.text_with_image_for_the_story.map((e, i) =>
           i % 2 == 0 ? (
             <div key={i} className="flex py-16 px-32 justify-between">
