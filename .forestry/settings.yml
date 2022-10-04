@@ -5,16 +5,11 @@ admin_path:
 webhook_url: 
 sections:
 - type: directory
-  path: data/ourmission
-  label: out mission
+  path: ''
+  label: Home
   create: all
-  match: "*"
   templates:
   - our-mission
-- type: heading
-  label: Our Mission
-- type: heading
-  label: Home
 - type: directory
   path: data/home
   label: home - main
@@ -36,6 +31,15 @@ sections:
   match: "*"
   templates:
   - social-media-snippet
+- type: heading
+  label: Our Mission
+- type: directory
+  path: data/ourmission
+  label: out mission
+  create: all
+  match: "*"
+  templates:
+  - our-mission
 - type: heading
   label: Our Impact
 - type: directory
