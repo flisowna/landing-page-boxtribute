@@ -4,6 +4,15 @@ auto_deploy: false
 admin_path: 
 webhook_url: 
 sections:
+- type: directory
+  path: data/ourmission
+  label: out mission
+  create: all
+  match: "*"
+  templates:
+  - our-mission
+- type: heading
+  label: Our Mission
 - type: heading
   label: Home
 - type: directory
