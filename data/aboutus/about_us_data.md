@@ -136,6 +136,13 @@ full_width_picture: "/uploads/freeshop.png"
   clothes, hygiene products and food to refugees. The lack of adapted tools and the
   chaotic situation in the field led us to rethink the logistics of humanitarian associations.
 text_with_picture_for_the_story:
+- image: "/uploads/shoes_close_up.png"
+  description_for_the_image: shoes in a warehouse
+  paragraph_s_group:
+  - paragraph: We founded Boxtribute to solve the problems we saw as volunteers and
+      aid workers in the field.
+  - paragraph: Our story begins in autumn 2016, at the height of the European refugee
+      crisis, in a camp in Northern Greece.
 - image: "/uploads/qrscanning.png"
   description_for_the_image: scanning qr code on a box
   paragraph_s_group:
