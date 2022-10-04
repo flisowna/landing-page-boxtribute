@@ -7,7 +7,6 @@ hero_images_with_description:
   description: a man carrying a box
 - image: "/uploads/building_freeshop.png"
   description: Women setting up a freeshop
-
 text_legal: 'Since december 2019, we are a registered Dutch foundation under the legal
   name Stichting Boxwise (KVK number: 76346536 | RSIN: 860596527).'
 team_member:
@@ -115,5 +114,6 @@ text_with_picture_for_the_story:
       in the Middle East. '
   - paragraph: "Our partners are engaged to support refugees and vulnerable population,
       by providing them clothes, healthcare, hygiene good, electronics etc. \n"
+full_width_image_description: 'freeshop '
 
 ---
