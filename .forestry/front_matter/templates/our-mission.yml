@@ -89,3 +89,5 @@ fields:
     schema:
       format: markdown
   label: text block 2
+pages:
+- data/ourmission/ourmission.md
