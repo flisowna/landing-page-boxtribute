@@ -6,6 +6,7 @@ type Props = {
   bg_color: string;
   order?: number;
   children: React.ReactNode;
+  position?: string;
 };
 
 const ImageText5050 = ({
@@ -14,10 +15,11 @@ const ImageText5050 = ({
   bg_color,
   order,
   children,
+  position,
 }: Props) => {
   return (
-    <div className={`flex flex-col md:flex-row bg-${bg_color}`}>
-      <div className={`w-full h-80 md:w-1/2 md:h-auto relative order-${order}`}>
+    <div className={`flex flex-col lg:flex-row bg-${bg_color}`}>
+      <div className={`w-full h-80 lg:w-1/2 lg:h-auto relative lg:order-${order}`}>
         <Image
         // width={1000}
         // height={1000}
@@ -25,10 +27,10 @@ const ImageText5050 = ({
           src={image}
           alt={image_description}
           objectFit='cover'
-          objectPosition='top'
+          objectPosition={position}
         />
       </div>
-      <div className="w-full px-4 md:w-1/2 md:px-20 py-8 ">{children}</div>
+      <div className="w-full px-4 lg:w-1/2 lg:px-20 py-8 ">{children}</div>
     </div>
   );
 };

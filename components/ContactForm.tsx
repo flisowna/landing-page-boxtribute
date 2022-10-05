@@ -65,4 +65,4 @@ const ContactForm = ({ form_title }: PropsContactForm) => {
   );
 };
 
-export default ContactForm
+export default ContactForm;

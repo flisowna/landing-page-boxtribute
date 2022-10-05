@@ -10,21 +10,20 @@ subtitle_1: goals
 text_with_picture:
 - image: "/uploads/man_in_warehouse.png"
   image_description: man in a warehouse
-  title: 'Especially, we want to: '
-  paragraphs:
-  - paragraph: 'Get critical help to people in crisis faster and more efficiently '
-  - paragraph: Legitimize dignity in aid for the most vulnerable
-  - paragraph: Increase responsiveness and and resilience in the humanitarian sector
+  textBlock:
+    title: 'Especially, we want to: '
+    paragraphs:
+    - paragraph: 'Get critical help to people in crisis faster and more efficiently '
+    - paragraph: Legitimize dignity in aid for the most vulnerable
+    - paragraph: Increase responsiveness and and resilience in the humanitarian sector
 - image: "/uploads/two_men_buidling_together.png"
   image_description: two men building together
-  title: 'We accomplish this by?:'
-  paragraphs:
-  - paragraph: Improving the end-to-end flow of aid goods from donation to distribution
-  - paragraph: 'Respecting the needs of aid recipients through choice
-
-      '
-  - paragraph: Fostering an open ecosystem where aid actors collaborate to effectively
-      meet individual needs
+  textBlock:
+    title: 'We accomplish this by?:'
+    paragraphs:
+    - paragraph: Improving the end-to-end flow of aid goods from donation to distribution
+    - paragraph: 'Respecting the needs of aid recipients through choice'
+    - paragraph: Fostering an open ecosystem where aid actors collaborate to effectively meet individual needs
 subtitle_2: solutions
 text_block_1: We work with our partners to improve the situation of vulnerable people
   in crisis situations. What’s more, we work to capacity build -- making sure that

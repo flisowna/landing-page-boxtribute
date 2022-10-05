@@ -18,6 +18,7 @@ import ImageText5050 from "../components/ImageText5050";
 import FactInNumbersContainer from "../components/FactInNumbersContainer";
   import SocialMediaSnippet from "../components/SocialMediaSnippet";
 import SectionTitle from "../components/SectionTitle";
+import { HeroSection } from "../components/HeroSection";
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -65,59 +66,24 @@ type Props = {
 };
 
 const Index = ({ homeData }: Props) => {
-  const array = [];
+  
   const typewriter_texts = homeData.subtitles_hero.map(
     (e) => e.text_for_typing
   );
-  console.log(typewriter_texts);
+ 
   return (
     <>
       {/* <Layout> */}
       <Head>
         <title>Boxtribute</title>
       </Head>
+      <HeroSection heroSectionData={homeData}/>
 
-      {/* hero section */}
-      <section className="w-full h-auto relative">
-        <div>
-          <Image
-            src={homeData.hero_image}
-            alt={homeData.hero_image_description}
-            width={1600}
-            height={1000}
-            z-0
-            className="blur"
-          />
-        </div>
-        <div className="absolute top-1/4 leading-none mb-4 left-1/2 transform -translate-x-1/2 ">
-          <h1 className="z-10 text-black text-center leading-0">
-            {homeData.page_title}
-          </h1>
-          <h2 className="z-10 text-black mx-0 md:text-6xl ">
-            <Typewriter
-              options={{
-                strings: [`${typewriter_texts}`],
-                autoStart: true,
-                loop: true,
-              }}
-            />
-          </h2>
-        </div>
-        <div className="cta-button-hero-section-home">
-          <CTAButton
-            cta_button={homeData.cta_button}
-            cta_link={homeData.cta_link}
-          />
-        </div>
-      </section>
-
-      {/* facts in numbers section */}
       <section className="md:p-16 md:mx-16">
         <TextBlock text_justify="center">{homeData.short_description}</TextBlock>
         <FactInNumbersContainer factInNumbers={homeData.facts_in_numbers} />
-      </section>
-
-      {/* news section */}
+      </section> 
+      
       <section>
         <SectionTitle title="News" />
         {homeData.news_list.map((e) => (
