@@ -35,7 +35,7 @@ export const Navbar = () => {
       ) : (
         <ul className="flex justify-end items-center">
           {navLinks.map((link, i) => (
-            <li key={i}>
+            <li className="list-none" key={i}>
               <Link href={link.path}>
                 {router.pathname === link.path ? (
                   <a className="font-bold p-2">{link.name}</a>
