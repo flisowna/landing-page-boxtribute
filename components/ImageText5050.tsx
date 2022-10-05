@@ -1,22 +1,23 @@
-import Link from "next/link";
 import Image from "next/image";
 
 type Props = {
   image: string;
   image_description: string;
   bg_color: string;
+  order?: number;
   children: React.ReactNode;
 };
 
-const ImageLeftText5050 = ({
+const ImageText5050 = ({
   image,
   image_description,
   bg_color,
+  order,
   children,
 }: Props) => {
   return (
     <div className={`flex flex-col md:flex-row bg-${bg_color}`}>
-      <div className="w-full md:w-1/2 h-1/2">
+      <div className={`w-full md:w-1/2 h-1/2 order-${order}`}>
         <Image
           width={1600}
           height={1000}
@@ -29,4 +30,4 @@ const ImageLeftText5050 = ({
   );
 };
 
-export default ImageLeftText5050;
+export default ImageText5050;

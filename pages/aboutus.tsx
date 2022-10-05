@@ -3,7 +3,7 @@ import Image from "next/image";
 import "react-alice-carousel/lib/alice-carousel.css";
 import AliceCarousel from "react-alice-carousel";
 import SectionTitle from "../components/SectionTitle";
-import ImageLeftText5050 from "../components/ImageLeftText5050";
+import ImageText5050 from "../components/ImageText5050";
 import TextBlock from "../components/TextBlock";
 
 type ITextAndImage = {
@@ -75,7 +75,7 @@ export const AboutUs = ({ aboutUsData }: Props) => {
         <div className="md:px-32 bg-blue">
           <SectionTitle title={aboutUsData.title_of_the_story} />
           <div className="md:py-16">
-            <ImageLeftText5050
+            <ImageText5050
               bg_color="blue"
               image={aboutUsData.text_with_picture_for_the_story[0].image}
               image_description={
@@ -90,7 +90,7 @@ export const AboutUs = ({ aboutUsData }: Props) => {
                   </p>
                 )
               )}
-            </ImageLeftText5050>
+            </ImageText5050>
           </div>
         </div>
         <TextBlock text_justify="left">{aboutUsData.text_block_1}</TextBlock>
@@ -101,7 +101,7 @@ export const AboutUs = ({ aboutUsData }: Props) => {
           height={996}
         />
         <div className="py-12 px-12 md:py-16 md:px-32">
-          <ImageLeftText5050
+          <ImageText5050
             bg_color="white"
             image={aboutUsData.text_with_picture_for_the_story[1].image}
             image_description={
@@ -116,13 +116,13 @@ export const AboutUs = ({ aboutUsData }: Props) => {
                 </p>
               )
             )}
-          </ImageLeftText5050>
+          </ImageText5050>
         </div>
         <TextBlock text_justify="left" bg_color="navy" text_color="white">
           {aboutUsData.text_block_2}
         </TextBlock>
         <div className="py-12 px-12 md:py-16 md:px-32">
-          <ImageLeftText5050
+          <ImageText5050
             bg_color="white"
             image={aboutUsData.text_with_picture_for_the_story[2].image}
             image_description={
@@ -137,7 +137,7 @@ export const AboutUs = ({ aboutUsData }: Props) => {
                 </p>
               )
             )}
-          </ImageLeftText5050>
+          </ImageText5050>
         </div>
       </section>
       <TextBlock text_justify="center" bg_color="blue">

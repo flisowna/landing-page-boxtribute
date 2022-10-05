@@ -14,7 +14,7 @@ import TextBlock from "../components/TextBlock";
 import FactInNumber from "../components/FactInNumbers";
 import FactInNumbers from "../components/FactInNumbers";
 import NewsSnippetImageLeft from "../components/NewsSnippet";
-import ImageLeftText5050 from "../components/ImageLeftText5050";
+import ImageText5050 from "../components/ImageText5050";
 import FactInNumbersContainer from "../components/FactInNumbersContainer";
   import SocialMediaSnippet from "../components/SocialMediaSnippet";
 import SectionTitle from "../components/SectionTitle";
@@ -169,7 +169,7 @@ const Index = ({ homeData }: Props) => {
         </div>
       </section>
       <SocialMediaSnippet socialMediaData={homeData.more_info} />
-      <ImageLeftText5050
+      <ImageText5050
         bg_color="gray"
         image={homeData.hero_image}
         image_description={homeData.hero_image_description}
@@ -181,7 +181,7 @@ const Index = ({ homeData }: Props) => {
           Deleniti eligendi voluptate sint commodi accusamus quia reprehenderit
           obcaecati dolores praesentium.
         </p>
-      </ImageLeftText5050>
+      </ImageText5050>
 
       {/* </Layout> */}
     </>
