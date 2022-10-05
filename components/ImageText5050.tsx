@@ -17,15 +17,18 @@ const ImageText5050 = ({
 }: Props) => {
   return (
     <div className={`flex flex-col md:flex-row bg-${bg_color}`}>
-      <div className={`w-full md:w-1/2 h-1/2 order-${order}`}>
+      <div className={`w-full h-80 md:w-1/2 md:h-auto relative order-${order}`}>
         <Image
-          width={1600}
-          height={1000}
+        // width={1000}
+        // height={1000}
+          layout="fill"
           src={image}
           alt={image_description}
+          objectFit='cover'
+          objectPosition='top'
         />
       </div>
-      <div className="w-full px-4 md:w-1/2 lg:px-20 lg:py-0 py-12">{children}</div>
+      <div className="w-full px-4 md:w-1/2 md:px-20 py-8 ">{children}</div>
     </div>
   );
 };
