@@ -5,6 +5,7 @@ import AliceCarousel from "react-alice-carousel";
 import SectionTitle from "../components/SectionTitle";
 import ImageText5050 from "../components/ImageText5050";
 import TextBlock from "../components/TextBlock";
+import { TeamMember } from "../components/TeamMember";
 
 type ITextAndImage = {
   image: string;
@@ -66,9 +67,9 @@ export const AboutUs = ({ aboutUsData }: Props) => {
       {/* hero section */}
       <section>
         <h1 className="text-center">{aboutUsData.title_of_the_page}</h1>
-        <div className="flex justify-center items-center ml-10">
+        {/* <div className="flex justify-center items-center ml-10">
           <AliceCarousel mouseTracking items={carouselItems} />
-        </div>
+        </div> */}
       </section>
       {/* our story section */}
       <section>
@@ -151,18 +152,7 @@ export const AboutUs = ({ aboutUsData }: Props) => {
         <p className="p-4">{aboutUsData.text_for_team_section}</p>
         <div className="flex flex-wrap justify-center mx-8">
           {aboutUsData.team_member.map((e, i) => (
-            <div key={i} className="m-4 w-2/5 lg:w-auto">
-              <Image
-                src={e.image}
-                alt={e.description}
-                width={350}
-                height={350}
-              />
-              <div className="text-center">
-                <h3>{e.name}</h3>
-                <h3>{e.role}</h3>
-              </div>
-            </div>
+            <TeamMember teamMemberData={e}/>
           ))}
         </div>
       </section>
