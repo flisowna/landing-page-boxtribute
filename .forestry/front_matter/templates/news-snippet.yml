@@ -46,7 +46,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: blog text
 pages:
 - data/home/news/news-from-the-field-serbia.md
