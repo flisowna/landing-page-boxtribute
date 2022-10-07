@@ -14,15 +14,15 @@ export function getDataBySlug(slug: string) {
 }
 
 
-const postsDirectory = join(process.cwd(), 'data/home/news')
+const newsDirectory = join(process.cwd(), 'data/home/news')
 
-export function getPostSlugs() {
-  return fs.readdirSync(postsDirectory)
+export function getNewsSlugs() {
+  return fs.readdirSync(newsDirectory)
 }
 
-export function getPostBySlug(slug: string, fields: string[] = []) {
-  const realSlug = slug.replace(/\.md$/, '')
-  const fullPath = join(postsDirectory, `${realSlug}.md`)
+export function getNewsBySlug(slug: string, fields: string[] = []) {
+  const newsSlug = slug.replace(/\.md$/, '')
+  const fullPath = join(newsDirectory, `${newsSlug}.md`)
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
@@ -35,7 +35,7 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   // Ensure only the minimal needed data is exposed
   fields.forEach((field) => {
     if (field === 'slug') {
-      items[field] = realSlug
+      items[field] = newsSlug
     }
     if (field === 'content') {
       items[field] = content
@@ -49,10 +49,10 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   return items
 }
 
-export function getAllPosts(fields: string[] = []) {
-  const slugs = getPostSlugs()
+export function getAllNews(fields: string[] = []) {
+  const slugs = getNewsSlugs()
   const posts = slugs
-    .map((slug) => getPostBySlug(slug, fields))
+    .map((slug) => getNewsBySlug(slug, fields))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
   return posts

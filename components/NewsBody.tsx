@@ -1,15 +1,9 @@
 type Props = {
-  content: string
-}
+  blogText: string;
+};
 
-const NewsBody = ({ content }: Props) => {
-  return (
-    <div className="max-w-2xl mx-auto">
-      <div
-        dangerouslySetInnerHTML={{ __html: content }}
-      />
-    </div>
-  )
-}
+const NewsBody = ({ blogText }: Props) => {
+  return <div className="max-w-2xl mx-auto">{blogText}</div>;
+};
 
-export default NewsBody
+export default NewsBody;

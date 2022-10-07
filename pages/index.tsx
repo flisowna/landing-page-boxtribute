@@ -1,24 +1,15 @@
 import Container from "../components/container";
 
-import { getDataBySlug } from "../lib/api";
+import { getAllNews, getDataBySlug } from "../lib/api";
 import Head from "next/head";
-import { CMS_NAME } from "../lib/constants";
-import Post from "../types/post";
-import Image from "next/image";
 import React from "react";
-import dynamic from "next/dynamic";
-import Typewriter from "typewriter-effect";
-import Link from "next/link";
-import CTAButton from "../components/CTAButton";
 import TextBlock from "../components/TextBlock";
-import FactInNumber from "../components/FactInNumbers";
-import FactInNumbers from "../components/FactInNumbers";
-import NewsSnippetImageLeft from "../components/NewsSnippet";
-import ImageText5050 from "../components/ImageText5050";
+import NewsPreview from "../components/NewsPreview";
 import FactInNumbersContainer from "../components/FactInNumbersContainer";
-  import SocialMediaSnippet from "../components/SocialMediaSnippet";
+import SocialMediaSnippet from "../components/SocialMediaSnippet";
 import SectionTitle from "../components/SectionTitle";
 import { HeroSection } from "../components/HeroSection";
+import { INewsData } from "../interfaces/global";
 
 interface ITypewriterText {
   text_for_typing: string;
@@ -63,92 +54,31 @@ interface IHomeData {
 
 type Props = {
   homeData: IHomeData;
+  allNews: INewsData[];
 };
 
-const Index = ({ homeData }: Props) => {
-  
-  const typewriter_texts = homeData.subtitles_hero.map(
-    (e) => e.text_for_typing
-  );
- 
+const Index = ({ homeData, allNews }: Props) => {
   return (
     <>
       {/* <Layout> */}
       <Head>
         <title>Boxtribute</title>
       </Head>
-      <HeroSection heroSectionData={homeData}/>
+      <HeroSection heroSectionData={homeData} />
 
       <section className="md:p-16 md:mx-16">
-        <TextBlock text_justify="center">{homeData.short_description}</TextBlock>
+        <TextBlock text_justify="center">
+          {homeData.short_description}
+        </TextBlock>
         <FactInNumbersContainer factInNumbers={homeData.facts_in_numbers} />
-      </section> 
-      
-      <section>
-        <SectionTitle title="News" />
-        {homeData.news_list.map((e) => (
-          <>
-            {/* <NewsSnippetImageLeft title={e.title} image={e.image} image_description={e.image_description} headline={e.headline} link={e.link} button_image={}/> */}
-            <div className="flex bg-gray ">
-              <div className="flex flex-col mx-32 my-16">
-                <h1 className="text-6xl font-bold uppercase">{e.title}</h1>
-                <h3 className="text-2xl mb-6">{e.headline}</h3>
-                <p>{e.text}</p>
-                <Link href={e.link}>
-                  <a className="flex text-red text-5xl mt-8 ">
-                    <h3 className="mr-16">Next</h3>
-                    <img src="/uploads/arrow.svg" />
-                  </a>
-                </Link>
-              </div>
-              <div className="flex justify-center items-center overflow-hidden">
-                <img
-                  className="shrink-0 min-h-full min-w-full"
-                  src={e.image}
-                  alt={e.image_description}
-                />
-              </div>
-            </div>
-          </>
-        ))}
       </section>
-      {/* more info section */}
-      <section>
-        <div className="flex bg-blue py-16 px-16">
-          {homeData.more_info.map((e) => (
-            <Link href={e.link}>
-              <a className="flex flex-1 flex-col mx-8 pb-6 grow bg-white">
-                <div className="flex justify-center items-center overflow-hidden h-60">
-                  <img
-                    className="shrink-0 min-h-full min-w-full"
-                    src={e.image}
-                    alt={e.image_description}
-                  />
-                </div>
-                <div className="flex items-center flex-col p-6">
-                  <h2 className="text-5xl mb-4">{e.title}</h2>
-                  <p>{e.text}</p>
-                </div>
-              </a>
-            </Link>
-          ))}
-        </div>
-      </section>
-      <SocialMediaSnippet socialMediaData={homeData.more_info} />
-      <ImageText5050
-        bg_color="gray"
-        image={homeData.hero_image}
-        image_description={homeData.hero_image_description}
-      >
-        <h1>Title</h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptas
-          nemo quidem vitae qui labore veritatis, vero obcaecati rem possimus!
-          Deleniti eligendi voluptate sint commodi accusamus quia reprehenderit
-          obcaecati dolores praesentium.
-        </p>
-      </ImageText5050>
 
+      <SectionTitle title="News" />
+      {allNews.map((e, i) => (
+        <NewsPreview newsHeaderData={e} order={i % 2} />
+      ))}
+
+      <SocialMediaSnippet socialMediaData={homeData.more_info} />
       {/* </Layout> */}
     </>
   );
@@ -157,17 +87,19 @@ const Index = ({ homeData }: Props) => {
 export default Index;
 
 export const getStaticProps = async () => {
-  // const allPosts = getAllPosts([
-  //   'title',
-  //   'date',
-  //   'slug',
-  //   'author',
-  //   'coverImage',
-  // ])
+  const allNews = getAllNews([
+    "title",
+    "headline",
+    "shortText",
+    "blogText",
+    "slug",
+    "image",
+    "image_description",
+  ]);
 
   const homeData = getDataBySlug("home/home_data");
 
   return {
-    props: { homeData },
+    props: { homeData, allNews },
   };
 };

@@ -1,90 +1,82 @@
-import { useRouter } from 'next/router'
-import ErrorPage from 'next/error'
-import Container from '../../components/container'
-import NewsBody from '../../components/NewsBody'
-import PostHeader from '../../components/post-header'
-import Layout from '../../components/Layout'
-import { getPostBySlug, getAllPosts } from '../../lib/api'
-// import PostTitle from '../../components/post-title'
-import Head from 'next/head'
-import { CMS_NAME } from '../../lib/constants'
-import markdownToHtml from '../../lib/markdownToHtml'
-import type PostType from '../../interfaces/post'
-
-
+import { useRouter } from "next/router";
+import ErrorPage from "next/error";
+import NewsBody from "../../components/NewsBody";
+import NewsHeader from "../../components/NewsHeader";
+import Layout from "../../components/Layout";
+import { getNewsBySlug, getAllNews } from "../../lib/api";
+import Head from "next/head";
+import type { INewsData } from "../../interfaces/global";
 
 type Props = {
-  post: PostType
-  morePosts: PostType[]
-  preview?: boolean
-}
+  slug: string;
+  newsData: INewsData;
+};
 
-export default function Post({ post, morePosts, preview }: Props) {
-  const router = useRouter()
-  if (!router.isFallback && !post?.slug) {
-    return <ErrorPage statusCode={404} />
+export default function Post({ slug, newsData }: Props) {
+  const router = useRouter();
+  console.log(newsData)
+
+  if (!router.isFallback && !slug) {
+    return <ErrorPage statusCode={404} />;
   }
   return (
     <Layout>
-      <Container>
-        {router.isFallback ? (
-          <h1>Loading…</h1>
-        ) : (
-          <>
-            <article className="mb-32">
-              <PostHeader
-                title={post.title}
-                coverImage={post.coverImage}
-                date={post.date}
-                author={post.author}
-              />
-              <NewsBody content={post.content} />
-            </article>
-          </>
-        )}
-      </Container>
+      {router.isFallback ? (
+        <h1>Loading…</h1>
+      ) : (
+        <>
+          <Head>
+            {slug}
+            <title>{newsData.title}</title>
+          </Head>
+          <article className="mb-32">
+            <NewsHeader newsHeaderData={newsData} />
+            <NewsBody blogText={newsData.blogText} />
+          </article>
+        </>
+      )}
     </Layout>
-  )
+  );
 }
 
 type Params = {
   params: {
-    slug: string
-  }
-}
+    slug: string;
+  };
+};
 
 export async function getStaticProps({ params }: Params) {
-  const post = getPostBySlug(params.slug, [
-    'title',
-    'slug',
-    'headline',
-    'text',
-    'image',
-    'image_description',
-  ])
-  const content = await markdownToHtml(post.content || '')
+  const newsData = getNewsBySlug(params.slug, [
+    "title",
+    "slug",
+    "headline",
+    "text",
+    "image",
+    "image_description",
+    "blogText"
+  ]);
+
 
   return {
     props: {
-      post: {
-        ...post,
-        content,
+      news: {
+        ...newsData,
       },
     },
-  }
+  };
 }
 
 export async function getStaticPaths() {
-  const posts = getAllPosts(['slug'])
+  const news = getAllNews(["slug"]);
 
   return {
-    paths: posts.map((post) => {
+    paths: news.map((post) => {
       return {
         params: {
           slug: post.slug,
         },
-      }
+      };
     }),
     fallback: false,
-  }
+  };
 }
