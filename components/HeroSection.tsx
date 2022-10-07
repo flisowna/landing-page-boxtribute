@@ -39,11 +39,9 @@ export const HeroSection = ({ heroSectionData }: Props) => {
         <h2 className="z-10 text-black mx-0 md:text-6xl ">
           <Typewriter
             options={{
-              strings: [
-                `${heroSectionData.subtitles_hero.map(
+              strings: heroSectionData.subtitles_hero.map(
                   (e) => e.text_for_typing
-                )}`,
-              ],
+                ),
               autoStart: true,
               loop: true,
             }}
