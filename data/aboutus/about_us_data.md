@@ -89,10 +89,10 @@ text_block_2: "Coordinators gave out virtual currency and tracked what was bough
   action on re-dignifying the beneficiaries. In 2019 Boxtribute was registered as
   a Dutch foundation under the legal name Stichting Boxwise."
 full_width_picture: "/uploads/freeshop.png"
-text_block_1: We volunteered with a Norwegian NGO to distribute donations such as
-  clothes, hygiene products and food to refugees. The lac**k of adapted tools and
-  the chaotic situation in the field led us to rethink the logistics of humanitarian
-  associations.**
+text_block_1: |-
+  # Test
+
+  We volunteered with a Norwegian NGO to distribute donations such as clothes, hygiene products and food to refugees. The lac**k of adapted tools and the chaotic situation in the field led us to rethink the logistics of humanitarian associations.**
 text_with_picture_for_the_story:
 - image: "/uploads/shoes_close_up.png"
   description_for_the_image: shoes in a warehouse
