@@ -34,14 +34,14 @@ export const HeroSection = ({ heroSectionData }: Props) => {
           className="blur"
         />
       </div>
-      <div className="absolute top-1/4 leading-none mb-4 left-1/2 transform -translate-x-1/2 ">
+      <div className="absolute top-1/4 left-1/2 transform -translate-x-1/2 ">
         <PageTitle title={heroSectionData.page_title} />
-        <h2 className="z-10 text-black mx-0 md:text-6xl ">
+        <h2 className="z-10 leading-none text-center">
           <Typewriter
             options={{
               strings: heroSectionData.subtitles_hero.map(
-                  (e) => e.text_for_typing
-                ),
+                (e) => e.text_for_typing
+              ),
               autoStart: true,
               loop: true,
             }}

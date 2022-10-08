@@ -27,10 +27,10 @@ const NewsPreview = ({ newsHeaderData, order }: Props) => {
     >
       <NewsHeader newsHeaderData={newsHeaderData} />
 
-      <Link as={`/posts/${newsHeaderData.slug}`} href="/posts/[slug]">
+      <Link href={`/posts/${newsHeaderData.slug}`} >
         <a className="flex text-red text-5xl mt-8 ">
           <h3 className="mr-16 capitalize">read more</h3>
-          <img src="/uploads/arrow.svg" />
+          <img className='w-8 lg:w-12' src="/uploads/arrow.svg" />
         </a>
       </Link>
       

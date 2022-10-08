@@ -21,8 +21,6 @@ const ImageText5050 = ({
     <div className={`flex flex-col lg:flex-row bg-${bg_color}`}>
       <div className={`w-full h-80 lg:w-1/2 lg:h-auto relative lg:order-${order}`}>
         <Image
-        // width={1000}
-        // height={1000}
           layout="fill"
           src={image}
           alt={image_description}

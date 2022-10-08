@@ -16,29 +16,27 @@ interface Props {
 const SocialMediaSnippet = ({ socialMediaData }: Props) => {
   return (
     <>
-      <ul className="flex flex-col lg:flex-row lg:bg-blue lg:py-16 px-4 lg:px-16 last:bg-blue ">
+      <ul className="flex flex-col lg:flex-row lg:bg-blue lg:py-12">
         {socialMediaData.map((e, i) => (
           <Link key={i} href={e.link}>
-            <a className="flex flex-1 justify-between mb-8 lg:mb-0 lg-py-0 lg:flex-col mx-8 pb-6 grow bg-white border-b-2 lg:border-0 social-snippet">
-              <div className="flex order-2 lg:order-1 justify-center items-center lg:w-full lg:overflow-hidden lg:h-60">
-                <Image
-                  //   className="shrink-0 min-h-full min-w-full"
+            <a className="flex flex-1 justify-between lg:flex-col py-12 lg:py-0 lg:mx-12 grow bg-white border-b-2 lg:border-0 social-snippet">
+              <div className="order-2 lg:order-1 h-50 w-1/2 lg:w-1/3 lg:h-auto relative mx-4">
+                <Image  
                   src={e.image}
                   alt={e.image_description}
-                  width={800}
-                  height={500}
+                  objectFit='cover'
+                  objectPosition='center'
+                  layout="fill"
                 />
-                {/* <div className="w-full md:w-1/2 h-1/2">
-        
-      </div> */}
               </div>
-              <div className="flex items-start flex-col p-6 order-1 lg:order-2">
-                <h2 className="text-5xl mb-4">{e.title}</h2>
-                <p className="hidden lg:block">{e.text}</p>
-
-                <div className="flex lg:hidden text-red text-5xl mt-8 ">
+              <div className="justify-between flex flex-col order-1 lg:order-2">
+                <div className="flex items-start flex-col p-6">
+                  <h2>{e.title}</h2>
+                  <p className="hidden lg:block">{e.text}</p>
+                </div>
+                <div className="flex lg:hidden text-red mt-8 ">
                   <h3 className="mr-16">Next</h3>
-                  <img src="/uploads/arrow.svg" />
+                  <img className="w-8 lg:w-12" src="/uploads/arrow.svg" />
                 </div>
               </div>
             </a>
