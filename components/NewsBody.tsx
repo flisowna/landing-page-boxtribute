@@ -1,9 +1,11 @@
+import { ReactNode } from "react";
+
 type Props = {
-  blogText: string;
+  children: ReactNode
 };
 
-const NewsBody = ({ blogText }: Props) => {
-  return <div className="max-w-2xl mx-auto">{blogText}</div>;
+const NewsBody = ({ children }: Props) => {
+  return <div className="md:mx-20">{children}</div>;
 };
 
 export default NewsBody;

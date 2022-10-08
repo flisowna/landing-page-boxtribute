@@ -74,8 +74,8 @@ export const Footer = () => {
         </div>
         <div className="flex flex-col md:items-end mt-10">
           <div className="flex gap-6 mb-4">
-            {footerData.social_media_icons.map((e) => (
-              <Link href={e.link}>
+            {footerData.social_media_icons.map((e, i) => (
+              <Link href={e.link} key={i} >
                 <a>
                   <img
                     className="h-12 md:h-18"

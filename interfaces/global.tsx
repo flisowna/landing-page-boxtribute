@@ -6,5 +6,6 @@ export interface INewsData {
     image: string;
     image_description: string;
     slug: string;
+    bg_color: string;
   }
   

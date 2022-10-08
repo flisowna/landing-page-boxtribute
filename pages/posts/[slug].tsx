@@ -6,36 +6,34 @@ import Layout from "../../components/Layout";
 import { getNewsBySlug, getAllNews } from "../../lib/api";
 import Head from "next/head";
 import type { INewsData } from "../../interfaces/global";
+import markdownToHtml from "../../lib/markdownToHtml";
 
 type Props = {
-  slug: string;
   newsData: INewsData;
 };
 
-export default function Post({ slug, newsData }: Props) {
+export default function Post({newsData}: Props) {
   const router = useRouter();
-  console.log(newsData)
 
-  if (!router.isFallback && !slug) {
+  if (!router.isFallback && !newsData?.slug) {
     return <ErrorPage statusCode={404} />;
   }
   return (
-    <Layout>
+    <div>
       {router.isFallback ? (
         <h1>Loading…</h1>
       ) : (
         <>
           <Head>
-            {slug}
             <title>{newsData.title}</title>
           </Head>
           <article className="mb-32">
             <NewsHeader newsHeaderData={newsData} />
-            <NewsBody blogText={newsData.blogText} />
+            <NewsBody><div dangerouslySetInnerHTML={{ __html: newsData.blogText }}></div></NewsBody>
           </article>
         </>
       )}
-    </Layout>
+    </div>
   );
 }
 
@@ -53,14 +51,17 @@ export async function getStaticProps({ params }: Params) {
     "text",
     "image",
     "image_description",
-    "blogText"
+    "blog_text"
   ]);
+
+  const blogText = await markdownToHtml(newsData.blog_text || '')
 
 
   return {
     props: {
-      news: {
+      newsData: {
         ...newsData,
+        blogText
       },
     },
   };

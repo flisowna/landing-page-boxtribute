@@ -9,7 +9,7 @@ interface INewsHeaderData {
   slug: string;
   image: string;
   image_description: string
-  
+  bg_color: string
 }
 
 type Props = {
