@@ -1,7 +1,5 @@
 import { getDataBySlug } from "../lib/api";
 import Image from "next/image";
-import "react-alice-carousel/lib/alice-carousel.css";
-import AliceCarousel from "react-alice-carousel";
 import SectionTitle from "../components/SectionTitle";
 import ImageText5050 from "../components/ImageText5050";
 import TextBlock from "../components/TextBlock";
@@ -149,10 +147,12 @@ export const AboutUs = ({ aboutUsData }: Props) => {
         <h2 className="mx-32 text-4xl p-8 text-center">
           {aboutUsData.title_for_the_team_section}
         </h2>
-        <p className="p-4">{aboutUsData.text_for_team_section}</p>
+        <div className="prose lg:prose-xl">
+          <p className="p-4">{aboutUsData.text_for_team_section}</p>
+        </div>
         <div className="flex flex-wrap justify-center mx-8">
           {aboutUsData.team_member.map((e, i) => (
-            <TeamMember teamMemberData={e}/>
+            <TeamMember teamMemberData={e} />
           ))}
         </div>
       </section>
