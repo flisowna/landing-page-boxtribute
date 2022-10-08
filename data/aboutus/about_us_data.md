@@ -79,15 +79,13 @@ text_for_team_section: "**We are a diverse** team of people from around the worl
   on the ground. It’s a solution we are proud to stand behind.   \n  \nAt **Boxtribute**,
   we ensure that our volunteers always have time to develop skills and explore new
   interests, as well as making sure everybody gets enough time off to relax!"
-text_block_3: Our team of former field coordinators, our experience as a foundation,
+text_block_3: "**Our team of former field coord**inators, our experience as a foundation,
   and our regular collaboration with partner on the ground has shown us the shortcom-ings
-  of the humanitarian system, and pushed us to rethink our commitment.
-text_block_2: "Coordinators gave out virtual currency and tracked what was bought
-  with it. The shop changed how volunteers and refugees interacted - it became a place
-  where everyone liked to go.   \n   \nThis great success has encouraged us to support
-  other associations through our application but also to refocus our humanitarian
-  action on re-dignifying the beneficiaries. In 2019 Boxtribute was registered as
-  a Dutch foundation under the legal name Stichting Boxwise."
+  of the humanitarian system, and pushed us to rethink our commitment."
+text_block_2: |-
+  **Coordinators gave out vir**tual currency and tracked what was bought with it. The shop changed how volunteers and refugees interacted - it became a place where everyone liked to go.
+
+  This great success has encouraged us to support other associations through our application but also to refocus our humanitarian action on re-dignifying the beneficiaries. In 2019 Boxtribute was registered as a Dutch foundation under the legal name Stichting Boxwise.
 full_width_picture: "/uploads/freeshop.png"
 text_block_1: |-
   # Test
@@ -118,5 +116,3 @@ text_with_picture_for_the_story:
 full_width_image_description: 'freeshop '
 
 ---
-
-
