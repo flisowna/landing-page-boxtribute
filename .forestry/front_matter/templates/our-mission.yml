@@ -14,7 +14,7 @@ fields:
     required: false
     wysiwyg: true
     schema:
-      format: markdown
+      format: html-blocks
   label: intro text
 - name: subtitle_1
   type: text
