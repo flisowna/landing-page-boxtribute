@@ -4,6 +4,7 @@ import TextBlock from "../components/TextBlock";
 import SectionTitle from "../components/SectionTitle";
 import ImageText5050 from "../components/ImageText5050";
 import BlockWithBulletPoints from "../components/BlockWithBulletPoints";
+import markdownToHtml from "../lib/markdownToHtml";
 
 export type ITextBlock = {
   title?: string;
@@ -22,24 +23,30 @@ type IParagraph = {
 
 interface IOurImpactData {
   title_of_the_page: string;
-  intro_text: string;
   subtitle_1: string;
   text_with_picture: ITextAndImage[];
   subtitle_2: string;
   text_block_1: string;
   subtitle_3: string;
-  text_block_2: string;
 }
 
 type Props = {
   ourImpactData: IOurImpactData;
+  intro_text: string;
+  text_block_2: string;
 };
 
-export const OurImpact = ({ ourImpactData }: Props) => {
+export const OurImpact = ({
+  ourImpactData,
+  intro_text,
+  text_block_2,
+}: Props) => {
   return (
     <div>
       <PageTitle title={ourImpactData.title_of_the_page} />
-      <TextBlock text_justify="center">{ourImpactData.intro_text}</TextBlock>
+      <TextBlock text_justify="left">
+        <div dangerouslySetInnerHTML={{ __html: intro_text }}></div>
+      </TextBlock>
       <SectionTitle title={ourImpactData.subtitle_1} />
       <ImageText5050
         position="top"
@@ -69,6 +76,9 @@ export const OurImpact = ({ ourImpactData }: Props) => {
           }
         />
       </ImageText5050>
+      <TextBlock text_justify="left">
+        <div dangerouslySetInnerHTML={{ __html: text_block_2 }}></div>
+      </TextBlock>
     </div>
   );
 };
@@ -77,8 +87,10 @@ export default OurImpact;
 
 export const getStaticProps = async () => {
   const ourImpactData = getDataBySlug("ourimpact/our_impact");
+  const text_block_2 = await markdownToHtml(ourImpactData.text_block_2 || "");
+  const intro_text = await markdownToHtml(ourImpactData.intro_text || "");
 
   return {
-    props: { ourImpactData },
+    props: { ourImpactData, text_block_2, intro_text },
   };
 };

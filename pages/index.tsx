@@ -78,7 +78,7 @@ const Index = ({ homeData, allNews }: Props) => {
         <NewsPreview newsHeaderData={e} order={i % 2} />
       ))}
 
-      <SocialMediaSnippet socialMediaData={homeData.more_info} />
+      {/* <SocialMediaSnippet socialMediaData={homeData.more_info} /> */}
       {/* </Layout> */}
     </>
   );
